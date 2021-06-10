@@ -41,9 +41,9 @@ body{
 }
 .logo p{
     text-align: center;
-    font-size: 30px;
+    font-size: 35px;
     text-transform: uppercase;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     margin-right: 10px;
 }
