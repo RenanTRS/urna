@@ -1,1 +1,10 @@
 /*font-family: 'Press Start 2P', cursive;*/
+.urna {
+    padding: 39px;
+    background: #B6B6B6;
+}
+.urna__tela {
+    width: 915px;
+    height: 745px;
+    background: #E6E8E7;
+}
