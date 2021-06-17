@@ -1,10 +1,49 @@
-/*font-family: 'Press Start 2P', cursive;*/
-.urna {
-    padding: 39px;
+body{
     background: #B6B6B6;
+    padding: 32px;
 }
-.urna__tela {
-    width: 915px;
-    height: 745px;
+.urna{
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: 100%;
+}
+.urna__tela{
+    grid-column: 1/1;
+    align-self: center;
+    width: 100%;
+    height: 500px;
     background: #E6E8E7;
+    border: 1px solid black;
+}
+.urna__teclado{
+    grid-column: 2/2;
+    align-self: center;
+    justify-self: end;
+}
+.teclado__logo{
+    background: #ffffff;
+    width: 418px;
+    height: 135px;
+    margin-bottom: 15px;
+}
+.console__btn__num{
+    box-sizing: border-box;
+    padding: 10px;
+    background: #23262D;
+    width: 418px;
+    height: 456px;
+    border-radius: 8px;
+    border: 0;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 80px 80px 80px 80px;
+}
+.btn__num{
+    width: 84px;
+    height: 50px;
+    align-self: center;
+    justify-self: center;
+}
+.btn__num:last-child{
+    grid-column: 2/2;
 }
