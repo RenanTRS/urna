@@ -18,7 +18,7 @@ body{
     width: 100%;
     height: 500px;
     background: #E6E8E7;
-    border: 1px solid black;
+    border: 1px solid #808080;
 }
 .urna__teclado{
     /*Área do teclado*/
