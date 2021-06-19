@@ -28,10 +28,23 @@ body{
 }
 .teclado__logo{
     /*Parte branca do logo*/
+    box-sizing: border-box;
     background: #ffffff;
     width: 418px;
     height: 135px;
     margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.logo__foto{
+    width: 100px;
+}
+.logo__texto{
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    font-size: 1.4rem;
 }
 .teclado__console{
     box-sizing: border-box;
@@ -57,7 +70,7 @@ body{
     place-self: center;
     box-sizing: border-box;
     border-radius: 8px;
-    border:0;
+    border: 0;
     border-bottom: 4px solid grey;
     background: #161920;
     color: #FFFFFF;
@@ -76,12 +89,12 @@ body{
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33%;
     grid-template-rows: auto;
+    margin-top: 1rem;
 }
 .btn__acao{
     width: 113px;
-    height: 92px;
     box-sizing: border-box;
-    padding: 14px 0;
+    padding: 30px 0;
     border-radius: 8px 8px 15px 15px;
     border: 0;
     justify-self: center;
@@ -97,6 +110,7 @@ body{
 }
 .btn__acao:nth-child(1):active{
     border-bottom: 0;
+    background: #d2d3d2;
 }
 .btn__acao:nth-child(2){
     background: #D16738;
@@ -104,6 +118,7 @@ body{
 }
 .btn__acao:nth-child(2):active{
     border-bottom: 0;
+    background: #af4f25;
 }
 .btn__acao:nth-child(3){
     background: #549B4B;
@@ -111,4 +126,5 @@ body{
 }
 .btn__acao:nth-child(3):active{
     border-bottom: 0;
+    background: #417a39;
 }
