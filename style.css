@@ -19,13 +19,43 @@ body{
     height: 500px;
     background: #E6E8E7;
     border: 1px solid #808080;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
 }
+.tela__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 450px;
+    height: 150px;
+    margin: 10% 0 0 10%;
+}
+.tela__titulo{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+}
+.tela__campo{
+    display: flex;
+}
+.campo__num{
+    height: 3rem;
+    width: 3rem;
+    margin: 10px 15px 0 0;
+    border: 1px solid black;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    padding: 7px;
+    box-sizing: border-box;
+}
+
 .urna__teclado{
     /*Área do teclado*/
     grid-column: 2/2;
     align-self: center;
     justify-self: end;
 }
+
 .teclado__logo{
     /*Parte branca do logo*/
     box-sizing: border-box;

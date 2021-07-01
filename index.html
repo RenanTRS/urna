@@ -7,11 +7,19 @@
     <link rel="stylesheet" href="reset.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
     <title>Urna</title>
 </head>
 <body>
     <main class="urna">
         <div class="urna__tela">
+            <div class="tela__container">
+                <h1 class="tela__titulo">Presidente</h1>
+                <div class="tela__campo">
+                    <p class="campo__num" id="numCampo"></p>
+                    <p class="campo__num" id="numCampo2"></p>
+                </div>
+            </div>
         </div>
         <div class="urna__teclado">
             <div class="teclado__logo">
@@ -23,16 +31,16 @@
             </div>
             <div class="teclado__console">
                 <div class="console__btn__num">
-                    <button class="btn__num">1</button>
-                    <button class="btn__num">2</button>
-                    <button class="btn__num">3</button>
-                    <button class="btn__num">4</button>
-                    <button class="btn__num">5</button>
-                    <button class="btn__num">6</button>
-                    <button class="btn__num">7</button>
-                    <button class="btn__num">8</button>
-                    <button class="btn__num">9</button>
-                    <button class="btn__num">0</button>
+                    <button class="btn__num" onclick="insert('1')">1</button>
+                    <button class="btn__num" onclick="insert('2')">2</button>
+                    <button class="btn__num" onclick="insert('3')">3</button>
+                    <button class="btn__num" onclick="insert('4')">4</button>
+                    <button class="btn__num" onclick="insert('5')">5</button>
+                    <button class="btn__num" onclick="insert('6')">6</button>
+                    <button class="btn__num" onclick="insert('7')">7</button>
+                    <button class="btn__num" onclick="insert('8')">8</button>
+                    <button class="btn__num" onclick="insert('9')">9</button>
+                    <button class="btn__num" onclick="insert('0')">0</button>
                 </div>
                 <div class="console__btn__acao">
                     <button class="btn__acao">branco</button>
