@@ -13,12 +13,41 @@
 <body>
     <main class="urna">
         <div class="urna__tela">
-            <div class="tela__container">
+            <div class="tela__container" id="tela__container">
                 <h1 class="tela__titulo">Presidente</h1>
                 <div class="tela__campo">
                     <p class="campo__num" id="numCampo"></p>
                     <p class="campo__num" id="numCampo2"></p>
                 </div>
+            </div>
+            <div class="tela__candidato" id="tela__candidato">
+                <div class="candidato__blocoDeDados">
+                    <div class="bloco__titulo">
+                        <p>Seu voto para</p>
+                        <h1 class="tela__titulo">Presidente</h1>
+                    </div>
+                
+                    <div id="candidato__dados">
+                        <div id="numeros" class="numeros">
+                            <p>Número: </p>
+                            <p id="num1" class="campo__num"></p>
+                            <p id="num2" class="campo__num"></p>
+                        </div>
+                        <div id="dados">
+                            <div class="bloco__nome">
+                                <p>Nome: </p>
+                                <p id="nome" class="nome"></p>
+                            </div>
+                            <div class="bloco__partido">
+                                <p>Partido: </p>
+                                <p id="partido" class="partido"></p>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <div id="candidato__foto" class="candidato__fotos"></div>
             </div>
         </div>
         <div class="urna__teclado">
