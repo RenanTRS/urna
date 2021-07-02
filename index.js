@@ -5,6 +5,7 @@ function insert(num){
     } else if(nums.length == 1){
         nums.push(num);
         document.getElementById("numCampo2").innerHTML = nums[1];
+        //document.getElementById("teclado__logo").style.display = "none";
     }
 }
 
