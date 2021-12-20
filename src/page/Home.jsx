@@ -11,10 +11,11 @@ export function Home(){
 
     const [numOne, setNumOne] = useState('');
     const [numTwo, setNumTwo] = useState('');
+    const [status, setStatus] = useState(0);
     
     return (
         <main>
-            <TesteContext.Provider value={{numOne, setNumOne, numTwo, setNumTwo}}>
+            <TesteContext.Provider value={{numOne, setNumOne, numTwo, setNumTwo, status, setStatus}}>
                 <Tela />
                 <Teclado />
             </TesteContext.Provider>
