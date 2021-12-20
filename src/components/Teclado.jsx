@@ -1,5 +1,6 @@
-import React, { useContext, useState }from 'react';
+import React, { useContext}from 'react';
 import { TesteContext } from '../page/Home';
+import { fakeData } from './fakeData';
 
 
 import brasaoImg from '../assets/image/brasao.png'

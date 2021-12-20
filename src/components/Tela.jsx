@@ -1,10 +1,19 @@
 import React, {useContext} from 'react';
 import { TesteContext } from '../page/Home';
+import { fakeData } from './fakeData';
 
 export function Tela(){
 
-    const {numOne, numTwo, status} = useContext(TesteContext);
-    console.log(numOne + numTwo);
+    const {numOne, numTwo, status, setStatus} = useContext(TesteContext);
+    const number = numOne + numTwo;
+    let teste = fakeData[number];
+    
+    if(number.length === 2){
+        if(!teste){
+            teste = '';
+            setStatus(2);
+        }
+    }
 
     return(
         <>
@@ -19,8 +28,13 @@ export function Tela(){
             }
             {(status === 1) &&
                 <div className='tela'>
-                    <h1>Vote em mim</h1>
-                
+                    <h1>Presidente</h1>
+                    <img src={teste.avatar} alt="" />
+                </div>
+            }
+            {(status === 2) &&
+                <div className='tela'>
+                    <h1>Voto nulo</h1>
                 </div>
             }
         </>
