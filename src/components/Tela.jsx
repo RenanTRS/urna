@@ -1,6 +1,9 @@
 import React from 'react';
 
 export function Tela(){
+
+    const {numOne, numTwo} = useContext(TesteContext);
+
     return(
         <>
             <div className='tela'>
