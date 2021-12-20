@@ -3,17 +3,26 @@ import { TesteContext } from '../page/Home';
 
 export function Tela(){
 
-    const {numOne, numTwo} = useContext(TesteContext);
+    const {numOne, numTwo, status} = useContext(TesteContext);
+    console.log(numOne + numTwo);
 
     return(
         <>
-            <div className='tela'>
-                <h1>Presidente</h1>
-                <div className='inputs'>
-                    <input type="text" value={numOne} />
-                    <input type="text" value={numTwo} />
+            {(status === 0) &&
+                <div className='tela'>
+                    <h1>Presidente</h1>
+                    <div className='inputs'>
+                        <input type="text" value={numOne} />
+                        <input type="text" value={numTwo} />
+                    </div>
                 </div>
-            </div>
+            }
+            {(status === 1) &&
+                <div className='tela'>
+                    <h1>Vote em mim</h1>
+                
+                </div>
+            }
         </>
     );
 }
