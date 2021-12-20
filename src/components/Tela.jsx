@@ -33,7 +33,7 @@ export function Tela(){
                             <p>Seu voto para</p>
                             <h1>Presidente</h1>
                             <ul>
-                                <li><p>Número:</p><div><span>{numOne}</span><span>{numTwo}</span></div></li>
+                                <li><p>Número:</p><div><span className='num'>{numOne}</span><span className='num'>{numTwo}</span></div></li>
                                 
                                 <li><p>Nome:</p><span>{teste.name}</span></li>
                                 
