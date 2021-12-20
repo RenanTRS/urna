@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { TesteContext } from '../page/Home';
 
 export function Tela(){
 
@@ -9,8 +10,8 @@ export function Tela(){
             <div className='tela'>
                 <h1>Presidente</h1>
                 <div className='inputs'>
-                    <input type="number" />
-                    <input type="number" />
+                    <input type="text" value={numOne} />
+                    <input type="text" value={numTwo} />
                 </div>
             </div>
         </>
