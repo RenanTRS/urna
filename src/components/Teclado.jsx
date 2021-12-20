@@ -1,18 +1,21 @@
-import React, { useContext }from 'react';
+import React, { useContext, useState }from 'react';
 import { TesteContext } from '../page/Home';
 
 
 import brasaoImg from '../assets/image/brasao.png'
 
 export function Teclado(){
-    const {numOne, setNumOne, setNumTwo} = useContext(TesteContext);
+    const {numOne, setNumOne, setNumTwo, setStatus} = useContext(TesteContext);
     
     function handlePress(valor){
         if(numOne === ''){
             setNumOne(valor);
         } else{
             setNumTwo(valor);
-        }
+            setTimeout(() => {
+                setStatus(1);
+            }, 1000);
+        }  
     }
 
     return(
