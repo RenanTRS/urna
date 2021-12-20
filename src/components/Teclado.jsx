@@ -3,6 +3,16 @@ import React from 'react';
 import brasaoImg from '../assets/image/brasao.png'
 
 export function Teclado(){
+    const {numOne, setNumOne, setNumTwo} = useContext(TesteContext);
+    
+    function handlePress(valor){
+        if(numOne === ''){
+            setNumOne(valor);
+        } else{
+            setNumTwo(valor);
+        }
+    }
+
     return(
         <div className='console'>
             <div className='etiqueta'>
