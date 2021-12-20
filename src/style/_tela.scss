@@ -35,4 +35,63 @@
             margin-left: 8.7rem;
         }
     }
+    .valido{
+        display: flex;
+        justify-content: space-between;
+
+        
+        margin-bottom: 1rem;
+        
+        .block-text{
+            width: 60%;
+
+            p{
+                text-transform: uppercase;
+                font-size: 3.3rem;
+            }
+            li{
+                display: grid;
+
+                grid-template-columns: 30% 1fr;
+                align-items: center;
+                //flex-direction: column;
+                margin-bottom: 1rem;
+
+                p{
+                    font-size: 2rem;
+                    display: inline;
+                }
+                span{
+                    text-transform: uppercase;
+                    font-size: 3rem;
+                }
+            }
+        }
+
+        img{
+            width: 21.8rem;
+            height: 27.2rem;
+            object-fit: cover;
+        }
+
+    }
+
+    footer{
+        border-top: .3rem solid black;
+        
+        font-size: 2rem;
+
+        padding: 2rem;
+        
+        span{
+            display: block;
+            margin: 0 0 2rem;
+        }
+
+        p{
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+    }
 }

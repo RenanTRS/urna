@@ -28,8 +28,25 @@ export function Tela(){
             }
             {(status === 1) &&
                 <div className='tela'>
-                    <h1>Presidente</h1>
-                    <img src={teste.avatar} alt="" />
+                    <div className='valido'>
+                        <div className='block-text'>
+                            <p>Seu voto para</p>
+                            <h1>Presidente</h1>
+                            <ul>
+                                <li><p>Número:</p><div><span>{numOne}</span><span>{numTwo}</span></div></li>
+                                
+                                <li><p>Nome:</p><span>{teste.name}</span></li>
+                                
+                                <li><p>Partido:</p><span>{teste.partido}</span></li>
+                            </ul>
+                        </div>
+                        <img src={teste.avatar} alt="" />
+                    </div>
+                    <footer>
+                        <span>Aperta a tecla</span>
+                        <p>VERDE para CONFIRMAR</p>
+                        <p>LARANJA para CORRIGIR</p>
+                    </footer>
                 </div>
             }
             {(status === 2) &&
