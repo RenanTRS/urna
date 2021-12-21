@@ -4,9 +4,12 @@ import { fakeData } from './fakeData';
 
 export function Tela(){
 
-    const {numOne, numTwo, status, setStatus} = useContext(TesteContext);
-    const number = numOne + numTwo;
-    let teste = fakeData[number];
+    const add = (event) => {
+        setNumOne(event);
+    }
+    const addt = (event) => {
+        setNumTwo(event);
+    }
 
     if(number.length === 2){
         if(!teste){
