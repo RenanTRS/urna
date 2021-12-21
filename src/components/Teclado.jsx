@@ -5,7 +5,26 @@ import { TesteContext } from '../page/Home';
 import brasaoImg from '../assets/image/brasao.png'
 
 export function Teclado(){
-    const {numOne, setNumOne, setNumTwo, setStatus, setNum} = useContext(TesteContext);
+    const {numOne, numTwo, setNumOne, setNumTwo, setStatus, numero, setNumero, setCandidate} = useContext(TesteContext);
+    
+
+    useEffect(()=>{
+        console.log(numero);
+        if(numero != ''){
+            if(fakeData[numero]){
+                setCandidate(fakeData[numero]);
+                console.log('tem');
+                setTimeout(() => {
+                    setStatus(1);
+                }, 1000)
+            }else{
+                console.log('não tem');
+                setTimeout(() => {
+                    setStatus(2);
+                }, 1000)
+            }
+        }
+    },[numero])
     
     function handlePress(valor){
         if(numOne === ''){
