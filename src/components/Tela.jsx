@@ -7,7 +7,7 @@ export function Tela(){
     const {numOne, numTwo, status, setStatus} = useContext(TesteContext);
     const number = numOne + numTwo;
     let teste = fakeData[number];
-    
+
     if(number.length === 2){
         if(!teste){
             teste = '';
@@ -52,6 +52,11 @@ export function Tela(){
             {(status === 2) &&
                 <div className='tela'>
                     <h1>Voto nulo</h1>
+                </div>
+            }
+            {(status === 3) &&
+                <div className='tela'>
+                    <h1>fim</h1>
                 </div>
             }
         </>
