@@ -19,6 +19,9 @@ export function Teclado(){
     }
     const branco = () => {
         setStatus(2);
+        setTimeout(() => {
+            setStatus(0)
+        }, 1000)
     }
     const corrige = () => {
         setNumOne('');
