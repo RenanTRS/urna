@@ -1,12 +1,11 @@
 import React, { useContext}from 'react';
 import { TesteContext } from '../page/Home';
-import { fakeData } from './fakeData';
 
 
 import brasaoImg from '../assets/image/brasao.png'
 
 export function Teclado(){
-    const {numOne, setNumOne, setNumTwo, setStatus} = useContext(TesteContext);
+    const {numOne, setNumOne, setNumTwo, setStatus, setNum} = useContext(TesteContext);
     
     function handlePress(valor){
         if(numOne === ''){
@@ -17,6 +16,22 @@ export function Teclado(){
                 setStatus(1);
             }, 1000);
         }  
+    }
+    const branco = () => {
+        setStatus(2);
+    }
+    const corrige = () => {
+        setNumOne('');
+        setNumTwo('');
+        setStatus(0);
+    }
+    const confirma = () => {
+        setStatus(3);
+        setTimeout(() => {
+            setNumOne('');
+            setNumTwo('');
+            setStatus(0);
+        }, 1000);
     }
 
     return(
@@ -39,9 +54,9 @@ export function Teclado(){
                     <button type="button" onClick={event => handlePress('0')}><span>0</span></button>
                 </div>
                 <div className='btn-action'>
-                    <button type="button" className='white'><span>Branco</span></button>
-                    <button type="button" className='orange'><span>Corrige</span></button>
-                    <button type="button" className='green'><span>Confirma</span></button>
+                    <button type="button" className='white' onClick={branco}><span>Branco</span></button>
+                    <button type="button" className='orange' onClick={corrige}><span>Corrige</span></button>
+                    <button type="button" className='green' onClick={confirma}><span>Confirma</span></button>
                 </div>
             </div>
         </div>
