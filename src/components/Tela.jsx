@@ -12,12 +12,7 @@ export function Tela(){
         setNumTwo(event);
     }
 
-    if(number.length === 2){
-        if(!teste){
-            teste = '';
-            setStatus(2);
-        }
-    }
+    const {numOne, setNumOne, numTwo, setNumTwo, status, candidate} = useContext(TesteContext);
 
     return(
         <>
