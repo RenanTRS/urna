@@ -7,12 +7,11 @@ import brasaoImg from '../assets/image/brasao.png'
 
 export function Teclado(){
     const {numOne, setNumOne, setNumTwo, setStatus, numero, setNumero, setCandidate} = useContext(TesteContext);
-    
 
     useEffect(()=>{
         //Atualiza sempre que o state numero é modificado
         console.log(numero);
-        if(numero != ''){ //Apenas se for diferente de vazio
+        if(numero !== ''){ //Apenas se for diferente de vazio
             if(fakeData[numero]){
                 setCandidate(fakeData[numero]);
                 console.log('tem');
