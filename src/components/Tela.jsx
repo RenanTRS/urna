@@ -75,7 +75,9 @@ export function Tela(){
             }
             {(status === 4) &&
                 <div className='tela'>
-                    <h1>fim</h1>
+                    <div className='fim'>
+                        <h1>fim</h1>
+                    </div>
                 </div>
             }
         </>
