@@ -39,7 +39,7 @@ export function Tela(){
                                 <li><p>Partido:</p><span>{teste.partido}</span></li>
                             </ul>
                         </div>
-                        <img src={teste.avatar} alt="" />
+                        <img src={candidate.avatar} alt="Candidato" />
                     </div>
                     <Footer />
                 </div>
