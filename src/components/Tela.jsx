@@ -64,9 +64,13 @@ export function Tela(){
                     <Footer />
                 </div>
             }
+            {/*Voto branco*/}
             {(status === 3) &&
                 <div className='tela'>
-                    <h1>Voto Branco</h1>
+                    <div className='branco'>
+                        <h1>Voto Branco</h1>
+                    </div>
+                    <Footer />
                 </div>
             }
             {(status === 4) &&
