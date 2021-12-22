@@ -1,16 +1,18 @@
-import React, { useContext}from 'react';
+import React, { useContext, useEffect }from 'react';
 import { TesteContext } from '../page/Home';
+import { fakeData } from './fakeData';
 
 
 import brasaoImg from '../assets/image/brasao.png'
 
 export function Teclado(){
-    const {numOne, numTwo, setNumOne, setNumTwo, setStatus, numero, setNumero, setCandidate} = useContext(TesteContext);
+    const {numOne, setNumOne, setNumTwo, setStatus, numero, setNumero, setCandidate} = useContext(TesteContext);
     
 
     useEffect(()=>{
+        //Atualiza sempre que o state numero é modificado
         console.log(numero);
-        if(numero != ''){
+        if(numero != ''){ //Apenas se for diferente de vazio
             if(fakeData[numero]){
                 setCandidate(fakeData[numero]);
                 console.log('tem');
@@ -31,16 +33,11 @@ export function Teclado(){
             setNumOne(valor);
         } else{
             setNumTwo(valor);
-            setTimeout(() => {
-                setStatus(1);
-            }, 1000);
+            setNumero(numOne+valor);
         }  
     }
     const branco = () => {
-        setStatus(2);
-        setTimeout(() => {
-            setStatus(0)
-        }, 1000)
+        setStatus(3);
     }
     const corrige = () => {
         setNumOne('');
@@ -48,7 +45,7 @@ export function Teclado(){
         setStatus(0);
     }
     const confirma = () => {
-        setStatus(3);
+        setStatus(4);
         setTimeout(() => {
             setNumOne('');
             setNumTwo('');
