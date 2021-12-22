@@ -16,7 +16,7 @@ export const fakeData =  {
         name: 'Seu Madruga',
         number: '72',
         avatar: 'https://pbs.twimg.com/media/EDf3u4WXkAAbjW5.png',
-        partido: 'Chavez'
+        partido: 'Chaves'
     },
     '51' : {
         name: 'Agostinho Carrara',
