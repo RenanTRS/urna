@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import { TesteContext } from '../page/Home';
-import { fakeData } from './fakeData';
+
+import { Footer } from './Footer';
 
 export function Tela(){
 
