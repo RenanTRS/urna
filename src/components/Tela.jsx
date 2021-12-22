@@ -54,7 +54,14 @@ export function Tela(){
             }
             {(status === 2) &&
                 <div className='tela'>
-                    <h1>Voto nulo</h1>
+                    <div className='nulo'>
+                        <span>Seu voto para</span>
+                        <h1>Presidente</h1>
+                        <p>Número: <span className='num'>{numOne}</span><span className='num'>{numTwo}</span></p>
+                        <h3>Número errado</h3>
+                        <h2>Voto nulo</h2>
+                    </div>
+                    <Footer />
                 </div>
             }
             {(status === 3) &&
