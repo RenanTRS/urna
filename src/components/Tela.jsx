@@ -41,11 +41,7 @@ export function Tela(){
                         </div>
                         <img src={teste.avatar} alt="" />
                     </div>
-                    <footer>
-                        <span>Aperta a tecla</span>
-                        <p>VERDE para CONFIRMAR</p>
-                        <p>LARANJA para CORRIGIR</p>
-                    </footer>
+                    <Footer />
                 </div>
             }
             {(status === 2) &&
