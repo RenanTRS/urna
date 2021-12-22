@@ -84,9 +84,59 @@
         img{
             width: 21.8rem;
             height: 27.2rem;
+            
             object-fit: cover;
         }
 
+    }
+    .branco{
+        h1{
+            margin: 20rem 0 0 0;
+
+            text-align: center;
+        }
+    }
+    .nulo{
+        span{
+            text-transform: uppercase;
+            font-size: 3.3rem;
+        }
+        p{
+            font-size: 2rem;
+
+            margin-top: 2rem;
+
+            .num{
+                border: 2px solid black;
+
+                padding: .5rem 1rem;
+                margin-right: 1rem;
+            }
+        }
+
+        h3{
+            margin-top: 3rem;
+
+            font-size: 2.5rem;
+            text-transform: uppercase;
+        }
+        h2{
+            text-align: center;
+            font-size: 5.2rem;
+        }
+    }
+    .fim{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        
+        h1{
+            text-transform: uppercase;
+            font-size: 24rem;
+
+            margin: 0;
+        }
     }
 
     footer{
