@@ -36,7 +36,7 @@ export function Tela(){
                                 
                                 <li><p>Nome:</p><span>{teste.name}</span></li>
                                 
-                                <li><p>Partido:</p><span>{teste.partido}</span></li>
+                                <li><p>Partido:</p><span>{candidate.partido}</span></li>
                             </ul>
                         </div>
                         <img src={candidate.avatar} alt="Candidato" />
