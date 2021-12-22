@@ -34,7 +34,7 @@ export function Tela(){
                             <ul>
                                 <li><p>Número:</p><div><span className='num'>{numOne}</span><span className='num'>{numTwo}</span></div></li>
                                 
-                                <li><p>Nome:</p><span>{teste.name}</span></li>
+                                <li><p>Nome:</p><span>{candidate.name}</span></li>
                                 
                                 <li><p>Partido:</p><span>{candidate.partido}</span></li>
                             </ul>
@@ -44,6 +44,7 @@ export function Tela(){
                     <Footer />
                 </div>
             }
+            {/*Voto nulo*/}
             {(status === 2) &&
                 <div className='tela'>
                     <div className='nulo'>
