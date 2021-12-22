@@ -90,6 +90,14 @@
                 span{
                     position: relative;
                 }
+                &:active{
+                    transform: translateY(.5rem);
+                    &::before{
+                        content: "";
+                        background: #232323;
+                        box-shadow: none;
+                    }
+                }
             }
         }
         .btn-action{
