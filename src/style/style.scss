@@ -42,6 +42,9 @@ $btn-green: #549B4B;
     box-shadow: inset -.8rem 0 .8rem rgba(0, 0, 0, 0.15), inset 0 -.8rem .8rem rgba(0, 0, 0, 0.25), 0 0 0 .2rem rgba(0, 0, 0, 0.75), 1rem 1.5rem 2rem rgba(0, 0, 0, 0.4);
     
     position: relative;
+    @include media-phone{
+        font-size: clamp(1rem, 5vw, 2.1rem);
+    }
 
     /*&:active{
         background: $bkg;
@@ -50,6 +53,19 @@ $btn-green: #549B4B;
             @include style-action(, , )
         }
     }*/
+}
+
+/*Mobile*/
+@mixin media-phone{
+    @media (max-width: 767.98px){ @content; }
+}
+/*Tablet*/
+@mixin media-tablet{
+    @media (min-width: 768px) and (max-width: 1199.98px) { @content; }
+}
+/*Desktop*/
+@mixin media-desktop{
+    @media (min-width: 1200px) { @content; }
 }
 
 * {
@@ -73,5 +89,13 @@ main{
     height: 100vh;
 
     padding: 3.4rem;
+
+    @include media-phone{
+        flex-direction: column;
+        
+        padding: 0;
+
+        gap: 0;
+    }
 }
 @import 'tela', 'teclado';
