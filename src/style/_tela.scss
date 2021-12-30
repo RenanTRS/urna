@@ -3,7 +3,6 @@
 
     width: 100%;
     max-width: 88rem;
-    //height: 55rem;
     height: 44rem;
 
     padding: 1rem;
@@ -12,6 +11,14 @@
     box-shadow: inset -4px -4px 4px #F5F5F5, inset 4px 4px 0px rgba(0, 0, 0, 0.25);
     @include media-phone{
         flex: 1;
+
+        box-shadow: initial;
+        border-radius: initial;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     h1{
@@ -20,7 +27,9 @@
         margin-left: 11.3rem;
 
         @include media-phone{
-            margin: 0;
+            margin: 2rem 0 0 0;
+
+            text-align: center;
         }
     }
     .inputs{
@@ -43,49 +52,109 @@
         }
         :not(:last-child){
             margin-left: 8.7rem;
+            @include media-phone{
+                margin: 0;
+            }
+        }
+        @include media-phone{
+            justify-content: center;
         }
     }
     .valido{
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
 
         
         margin-bottom: 1rem;
-        
-        .block-text{
-            width: 60%;
+        position: relative;
 
+        header{
+            max-width: 60%;
+            @include media-phone{
+                margin-bottom: clamp(0rem, 5vh, 4rem);
+            }
             p{
                 text-transform: uppercase;
                 font-size: 3.3rem;
+                @include media-phone{
+                    text-align: center;
+                    font-size: 1.8rem;
+                }
             }
             h1{
                 text-align: center;
-                margin: 2.5rem 0;
-            }
-            li{
-                display: grid;
-
-                grid-template-columns: 30% 1fr;
-                align-items: center;
                 
-                margin-bottom: 1.5rem;
-
-                p{
-                    font-size: 2rem;
-                    display: inline;
+                margin: 1rem 0;
+                
+                font-size: 3.4rem;
+                @include media-phone{
+                    margin: 1rem 0;
                 }
-                span{
-                    text-transform: uppercase;
-                    font-size: 3rem;
-                }
-                .num{
-                    border: 2px solid black;
+            }  
+        }
+        
+        @include media-phone{
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            
+            margin-bottom: 0;
 
-                    padding: .5rem 1rem;
-                    margin-right: 1rem;
+            width: 100%;
+        }
+        .block-text{
+            width: 60%;
+
+            @include media-phone{
+                width: initial;
+                //margin-top: clamp(0rem, 28vh, 20rem);
+            }
+
+            ul{
+                margin: 5rem 0 0 0;
+                @include media-phone{
+                    margin-top: 2rem;
+                }
+                li{
+                    display: grid;
+    
+                    grid-template-columns: 30% 1fr;
+                    align-items: center;
+                    
+                    margin-bottom: 1.5rem;
+    
+                    p{
+                        font-size: 2rem;
+                        display: inline;
+                    }
+                    span{
+                        text-transform: uppercase;
+                        font-size: 3rem;
+                    }
+                    .num{
+                        border: 2px solid black;
+    
+                        padding: .5rem 1rem;
+                        margin-right: 1rem;
+                    }
+    
+                    @include media-phone{
+                        display: flex;
+                        flex-direction: column;
+                        align-itens: center;
+                        &:last-child{
+                            margin-bottom: initial;
+                        }
+                        p{
+                            display: none;
+                        }
+                        span{
+                            font-size: clamp(1.8rem, 5vw, 3rem);
+                        }
+                    }
                 }
             }
+            
         }
 
         img{
@@ -93,6 +162,19 @@
             height: 27.2rem;
             
             object-fit: cover;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            @include media-phone{
+                width: 14rem;
+                height: 17.5rem;
+
+                align-items: center;
+
+                position: relative;
+            }
         }
 
     }
@@ -153,6 +235,10 @@
 
         padding: 2rem;
         
+        @include media-phone{
+            display: none;
+            font-size: clamp(1.6rem, 4vw, 2rem);
+        }
         span{
             display: block;
             

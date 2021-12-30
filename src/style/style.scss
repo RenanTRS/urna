@@ -44,6 +44,8 @@ $btn-green: #549B4B;
     position: relative;
     @include media-phone{
         font-size: clamp(1rem, 5vw, 2.1rem);
+
+        height: clamp(5rem, 11vh, 8rem);
     }
 
     /*&:active{
