@@ -20,8 +20,7 @@ export function Tela(){
                 <div className='tela'>
                     <h1>Presidente</h1>
                     <div className='inputs'>
-                        {/*<input type='number' value={numOne} onChange={(event)=>add(event)}/>*/}
-                        <input type='number' value={numOne}/>
+                        <input type='number' value={numOne} onChange={(event)=>add(event)}/>
                         <input type='number' value={numTwo} onChange={(event) => addt(event)}/>
                     </div>
                 </div>
