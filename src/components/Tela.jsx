@@ -32,14 +32,28 @@ export function Tela(){
                             <p>Seu voto para</p>
                             <h1>Presidente</h1>
                         </header>
+                        
                         <img src={candidate.avatar} alt="Candidato" />
+                        
                         <div className='block-text'>
                             <ul>
-                                <li><p>Número:</p><div><span className='num'>{numOne}</span><span className='num'>{numTwo}</span></div></li>
+                                <li>
+                                    <p>Número:</p>
+                                    <div>
+                                        <span className='num'>{numOne}</span>
+                                        <span className='num'>{numTwo}</span>
+                                    </div>
+                                </li>
                                 
-                                <li><p>Nome:</p><span>{candidate.name}</span></li>
+                                <li>
+                                    <p>Nome:</p>
+                                    <span>{candidate.name}</span>
+                                </li>
                                 
-                                <li><p>Partido:</p><span>{candidate.partido}</span></li>
+                                <li>
+                                    <p>Partido:</p>
+                                    <span>{candidate.partido}</span>
+                                </li>
                             </ul>
                         </div>
                     </div>
