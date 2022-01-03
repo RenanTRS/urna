@@ -8214,6 +8214,11 @@ sshpk@^1.7.0:
     safer-buffer "^2.0.2"
     tweetnacl "~0.14.0"
 
+st-components@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/st-components/-/st-components-0.0.4.tgz#deaa31591ebf06e6c7842d0a121671ae26f6df83"
+  integrity sha512-j/IcvbiabVzUuVVH4ov01pSyfoG/4+noutVUp+Q0ZYc2GlE2YmoweiV64EZvOgdJOctBjxX22BMmJEm5PHeWMA==
+
 stable@^0.1.8:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/stable/-/stable-0.1.8.tgz#836eb3c8382fe2936feaf544631017ce7d47a3cf"
