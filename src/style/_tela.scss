@@ -30,6 +30,7 @@
             margin: 2rem 0 0 0;
 
             text-align: center;
+            font-size: clamp(3rem, 11vw, 5.2rem);
         }
     }
     .inputs{
@@ -49,6 +50,9 @@
             font-size: 5rem;
 
             padding-left: 1rem;
+            @include media-phone{
+                height: clamp(5rem, 12vh, 6.9rem);
+            }
         }
         :not(:last-child){
             margin-left: 8.7rem;
@@ -225,6 +229,10 @@
             font-size: 24rem;
 
             margin: 0;
+
+            @include media-phone{
+                font-size: clamp(15rem, 40vw, 24rem);
+            }
         }
     }
 
