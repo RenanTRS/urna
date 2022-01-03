@@ -61,7 +61,10 @@
                 grid-column: 2/2;
             }
             @include media-phone{
-                display: none;
+                gap: clamp(1rem, 2vh, 2.5rem) clamp(1rem, 3vw, 2.8rem);
+                justify-items: center;
+
+                width: clamp(23rem, 76vw, 31.2rem);
             }
 
             button{
@@ -87,6 +90,9 @@
 
                 overflow: hidden;
 
+                @include media-phone{
+                    width: clamp(2.3rem, 24vw, 8.4rem);
+                }
                 &::before{
                     content: "";
 
@@ -122,6 +128,9 @@
             justify-content: space-between;
 
             width: 100%;
+            @include media-phone{
+                max-width: 40rem;
+            }
 
             .white{
                 background: linear-gradient(180deg, #ffffff, #838080);
