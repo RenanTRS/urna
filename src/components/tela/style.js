@@ -170,14 +170,7 @@ export const BlockTextStyled = styled.div`
                 flex-direction: column;
                 align-items: center;
                 margin-bottom: initial;
-            
-                p{
-                    display: none;
-                }
-                span{
-                    font-size: clamp(1.5rem, 4.5vh, 4rem);
-                    text-align: center;
-                }
+
                 div{
                     display: flex;
                     span{
@@ -188,10 +181,18 @@ export const BlockTextStyled = styled.div`
 
             p{
                 font-size: 2rem;
+                ${media.phone}{
+                    display: none;
+                }
             }
             span{
                 text-transform: uppercase;
                 font-size: 3rem;
+
+                ${media.phone}{
+                    font-size: clamp(1.5rem, 4.5vh, 4rem);
+                    text-align: center;
+                }
             }
         }
     }
@@ -203,23 +204,5 @@ export const NumStyled = styled.span`
     padding: .5rem 1rem;
     &:not(:last-child){
         margin-right: 1rem;
-    }
-`;
-
-export const FooterStyled = styled.footer`
-    border-top: .3rem solid black;
-
-    font-size: 2rem;
-
-    padding: 2rem;
-
-    ${media.phone}{
-        display: none;
-
-        margin: 0 0 2rem;
-    }
-    p{
-        margin-left: 2rem;
-        margin-bottom: 1rem;
     }
 `;
