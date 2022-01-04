@@ -67,7 +67,7 @@ export function Tela(){
             }
             {/*Voto nulo*/}
             {(status === 2) &&
-                <div className='tela'>
+                <TelaStyled>
                     <div className='nulo'>
                         <span>Seu voto para</span>
                         <h1>Presidente</h1>
@@ -76,23 +76,23 @@ export function Tela(){
                         <h2>Voto nulo</h2>
                     </div>
                     <Footer />
-                </div>
+                </TelaStyled>
             }
             {/*Voto branco*/}
             {(status === 3) &&
-                <div className='tela'>
+                <TelaStyled>
                     <div className='branco'>
                         <h1>Voto Branco</h1>
                     </div>
                     <Footer />
-                </div>
+                </TelaStyled>
             }
             {(status === 4) &&
-                <div className='tela'>
+                <TelaStyled>
                     <div className='fim'>
                         <h1>fim</h1>
                     </div>
-                </div>
+                </TelaStyled>
             }
         </>
     );
