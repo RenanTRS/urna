@@ -59,7 +59,7 @@ export function Teclado(){
                 <span>Justiça Eleitoral</span>
             </div>
             <div className='teclado'>
-                {(status === 0) &&
+                
                     <div className='btn-numbers'>
                         <button type="button" onClick={event => handlePress('1')}><span>1</span></button>
                         <button type="button" onClick={event => handlePress('2')}><span>2</span></button>
@@ -72,7 +72,7 @@ export function Teclado(){
                         <button type="button" onClick={event => handlePress('9')}><span>9</span></button>
                         <button type="button" onClick={event => handlePress('0')}><span>0</span></button>
                     </div>
-                }
+                
                 <div className='btn-action'>
                     <button type="button" className='white' onClick={branco}><span>Branco</span></button>
                     <button type="button" className='orange' onClick={corrige}><span>Corrige</span></button>
