@@ -52,7 +52,7 @@ export const InputsStyled = styled.div`
         margin: 0;
     }
 
-    input{
+    div{
         border: 2px solid black;
 
         background-color: ${colors.tela};
@@ -62,7 +62,10 @@ export const InputsStyled = styled.div`
 
         font-size: 5rem;
 
-        padding-left: 1rem;
+        //padding-left: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         ${media.phone}{
             height: clamp(5rem, 12vh, 6.9rem);

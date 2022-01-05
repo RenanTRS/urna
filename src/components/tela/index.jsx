@@ -21,8 +21,8 @@ export function Tela(){
                 <TelaStyled>
                     <h1>Presidente</h1>
                     <InputsStyled>
-                        <input type='number' value={numOne} onChange={(event)=>add(event)}/>
-                        <input type='number' value={numTwo} onChange={(event) => addt(event)}/>
+                        <div>{numOne}</div>
+                        <div>{numTwo}</div>
                     </InputsStyled>
                 </TelaStyled>
             }
