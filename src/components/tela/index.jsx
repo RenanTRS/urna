@@ -6,12 +6,13 @@ import { Footer } from '../footer'
 
 export function Tela(){
 
+    {/*
     const add = (event) => {
         setNumOne(event);
     }
     const addt = (event) => {
         setNumTwo(event);
-    }
+    }*/}
 
     const {numOne, setNumOne, numTwo, setNumTwo, status, candidate} = useContext(TesteContext);
 

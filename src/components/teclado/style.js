@@ -12,6 +12,10 @@ export const ConsoleStyled = styled.div`
     ${media.phone}{
         max-width: none;
     }
+    ${media.phoneLandscape}{
+        height: 100%;
+        width: initial;
+    }
 `;
 
 export const EtiquetaStyled = styled.div`
@@ -54,6 +58,11 @@ export const TecladoStyled = styled.div`
 
         border-radius: initial;
     }
+    ${media.phoneLandscape}{
+        flex-direction: row;
+        
+        height: 100%;
+    }
 `;
 
 export const BtnNumbersStyled = styled.div`
@@ -70,6 +79,11 @@ export const BtnNumbersStyled = styled.div`
         width: clamp(23rem, 76vw, 31.2rem);
 
         display: ${props => props.display || 'grid'};
+    }
+    ${media.phoneLandscape}{
+        width: clamp(20rem,41vw,31.2rem);
+
+        gap: clamp(1rem,2vh,2.5rem) clamp(1rem,1vw,2.8rem);
     }
 
     button{
@@ -97,6 +111,9 @@ export const BtnNumbersStyled = styled.div`
         
         ${media.phone}{
             width: clamp(2.3rem, 24vw, 8.4rem);
+        }
+        ${media.phoneLandscape}{
+            width: clamp(2.3rem,10vw,8.4rem);
         }
 
         &:last-child{
@@ -144,6 +161,13 @@ export const BtnActionStyled = styled.div`
     ${media.phone}{
         max-width: 40rem;
     }
+    ${media.phoneLandscape}{
+        flex-direction: column;
+
+        max-width: initial;
+        height: 100%;
+        width: clamp(9rem, 19vw, 13rem);
+    }
 `;
 
 const Button = styled.button`
@@ -172,8 +196,19 @@ const Button = styled.button`
 
         height: clamp(5rem, 11vh, 8rem);
     }
+    ${media.phoneLandscape}{
+        justify-content: center;
+
+        height: clamp(5rem,26vh,8rem);
+    }
     span{
         position: relative;
+
+        color: black;
+
+        ${media.phoneLandscape}{
+            font-size: clamp(1.4rem, 3vw, 5rem);
+        }
     }
 `;
 

@@ -11,11 +11,9 @@ export function Teclado(){
 
     useEffect(()=>{
         //Atualiza sempre que o state numero é modificado
-        console.log(numero);
         if(numero !== ''){ //Apenas se for diferente de vazio
             if(fakeData[numero]){
                 setCandidate(fakeData[numero]);
-                console.log('tem');
                 setTimeout(() => {
                     setStatus(1);
                 }, 1000)

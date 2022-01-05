@@ -21,4 +21,7 @@ export const MainStyled = styled.main`
 
         padding: 0;
     }
+    ${media.phoneLandscape}{
+        flex-direction: row;
+    }
 `

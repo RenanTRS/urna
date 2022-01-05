@@ -24,6 +24,9 @@ export const TelaStyled = styled.div`
         align-items: center;
         justify-content: center;
     }
+    ${media.phoneLandscape}{
+        height: 100%;
+    }
 
     h1{
         font-size: 5.2rem;
@@ -36,6 +39,9 @@ export const TelaStyled = styled.div`
 
             text-align: center;
             font-size: clamp(3rem, 11vw, 5.2rem);
+        }
+        ${media.phoneLandscape}{
+            font-size: clamp(2rem,6vw,5.2rem);
         }
     }
 `;
@@ -62,13 +68,15 @@ export const InputsStyled = styled.div`
 
         font-size: 5rem;
 
-        //padding-left: 1rem;
         display: flex;
         justify-content: center;
         align-items: center;
 
         ${media.phone}{
             height: clamp(5rem, 12vh, 6.9rem);
+        }
+        ${media.phoneLandscape}{
+            width: clamp(3.4rem, 5vw, 5.4rem);
         }
     }
 `;
@@ -90,6 +98,10 @@ export const ValidoStyled = styled.div`
 
         width: 100%;
     }
+    ${media.phoneLandscape}{
+        align-items: initial;
+        justify-content: initial;
+    }
 
     header{
         max-width: 70%;
@@ -100,6 +112,13 @@ export const ValidoStyled = styled.div`
             flex-direction: column;
             justify-content: center;
         }
+        ${media.phoneLandscape}{
+            height: clamp(0rem,16vh,25rem);
+            max-width: 60%;
+
+            justify-content: initial;
+            flex: 1;
+        }
 
         p{
             text-transform: uppercase;
@@ -108,6 +127,9 @@ export const ValidoStyled = styled.div`
             ${media.phone}{
                 text-align: center;
                 font-size: 1.8rem;
+            }
+            ${media.phoneLandscape}{
+                text-align: initial;
             }
         }
         h1{
@@ -118,6 +140,9 @@ export const ValidoStyled = styled.div`
 
             ${media.phone}{
                 margin: 0;
+            }
+            ${media.phoneLandscape}{
+                flex: 1;
             }
         }
     }
@@ -141,6 +166,11 @@ export const ValidoStyled = styled.div`
             position: relative;
             padding: 1rem;
         }
+        ${media.phoneLandscape}{
+            width: clamp(13rem,30vw,27.2rem);
+
+            position: absolute;
+        }
     }
 `;
 
@@ -149,6 +179,11 @@ export const BlockTextStyled = styled.div`
 
     ${media.phone}{
         width: 100%;
+    }
+    ${media.phoneLandscape}{
+        width: 60%;
+
+        flex: 2;
     }
 
     ul{
@@ -181,11 +216,19 @@ export const BlockTextStyled = styled.div`
                     }
                 }
             }
+            ${media.phoneLandscape}{
+                display: grid;
+                grid-template-columns: 43% auto;
+                align-items: center;
+            }
 
             p{
                 font-size: 2rem;
                 ${media.phone}{
                     display: none;
+                }
+                ${media.phoneLandscape}{
+                    display: block;
                 }
             }
             span{
@@ -195,6 +238,10 @@ export const BlockTextStyled = styled.div`
                 ${media.phone}{
                     font-size: clamp(1.5rem, 4.5vh, 4rem);
                     text-align: center;
+                }
+                ${media.phoneLandscape}{
+                    text-align: initial;
+                    font-size: clamp(1.5rem, 4.5vw, 4rem);
                 }
             }
         }
