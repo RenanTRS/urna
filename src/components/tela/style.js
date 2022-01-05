@@ -89,7 +89,7 @@ export const ValidoStyled = styled.div`
     }
 
     header{
-        max-width: 60%;
+        max-width: 70%;
 
         ${media.phone}{
             height: clamp(0rem, 9vh, 25rem);
@@ -204,5 +204,102 @@ export const NumStyled = styled.span`
     padding: .5rem 1rem;
     &:not(:last-child){
         margin-right: 1rem;
+    }
+`;
+
+export const NuloStyled = styled.div`
+    header{
+        max-width: 70%;
+
+        ${media.phone}{
+            height: clamp(0rem, 9vh, 25rem);
+            width: 100%;
+            max-width: initial;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        p{
+            text-transform: uppercase;
+            font-size: 3.3rem;
+
+            ${media.phone}{
+                text-align: center;
+                font-size: 1.8rem;
+            }
+        }
+        h1{
+            text-align: center;
+            font-size: 3.4rem;
+
+            margin: 1rem 0;
+
+            ${media.phone}{
+                margin: 0;
+            }
+        }
+    }
+    ul{
+        ${media.phone}{
+            margin-top: 2rem;
+        }
+        li{
+            display: flex;
+            align-items: center;
+            ${media.phone}{
+                justify-content: center;
+            }
+            
+            p{
+                font-size: 2rem;
+                
+                margin-right: 2rem;
+                
+                ${media.phone}{
+                    display:none;
+                }
+            }
+            div{
+                display: flex;
+                font-size: 3rem;
+            }
+            h3{
+                width: 21rem;
+
+                margin-top: 3rem;
+
+                font-size: 2.5rem;
+                text-transform: uppercase;
+            }
+            h2{
+                text-align: center;
+                font-size: 5.2rem;
+
+                width: 100%;
+
+                margin-top: 2rem;
+            }
+        }
+    }
+`;
+export const FimStyled = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    height: 100%;
+    width: 100%;
+
+    h1{
+        text-transform: uppercase;
+        font-size: 24rem;
+        
+        margin: 0;
+
+        ${media.phone}{
+            font-size: clamp(15rem, 40vw, 24rem);
+        }
     }
 `;

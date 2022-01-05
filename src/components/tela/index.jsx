@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
-import { TesteContext } from '../../page/tome';
-import {TelaStyled, InputsStyled, ValidoStyled, BlockTextStyled, NumStyled} from './style'
+import { TesteContext } from '../../page/home';
+import {TelaStyled, InputsStyled, ValidoStyled, BlockTextStyled, NumStyled, NuloStyled, FimStyled} from './style'
 
 import { Footer } from '../footer'
 
@@ -68,13 +68,31 @@ export function Tela(){
             {/*Voto nulo*/}
             {(status === 2) &&
                 <TelaStyled>
-                    <div className='nulo'>
-                        <span>Seu voto para</span>
-                        <h1>Presidente</h1>
-                        <p>Número: <span className='num'>{numOne}</span><span className='num'>{numTwo}</span></p>
-                        <h3>Número errado</h3>
-                        <h2>Voto nulo</h2>
-                    </div>
+                    <NuloStyled>
+                        <header>
+                            <p>Seu voto para</p>
+                            <h1>Presidente</h1>
+                        </header>
+                        <ul>
+                            <li>
+                                <p>Número: </p>
+                                <div>
+                                    <NumStyled>
+                                        {numOne}
+                                    </NumStyled>
+                                    <NumStyled>
+                                        {numTwo}
+                                    </NumStyled>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>Número errado</h3>
+                            </li>
+                            <li>
+                                <h2>Voto nulo</h2>
+                            </li>
+                        </ul>
+                    </NuloStyled>
                     <Footer />
                 </TelaStyled>
             }
@@ -89,9 +107,9 @@ export function Tela(){
             }
             {(status === 4) &&
                 <TelaStyled>
-                    <div className='fim'>
+                    <FimStyled>
                         <h1>fim</h1>
-                    </div>
+                    </FimStyled>
                 </TelaStyled>
             }
         </>

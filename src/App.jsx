@@ -1,6 +1,6 @@
 import React from 'react';
 //import { Home } from './page/Home';
-import { Home } from './page/tome';
+import { Home } from './page/home';
 import { Reset } from './style/reset';
 import { Base } from './style/base';
 function App() {

@@ -1,13 +1,8 @@
 import React, {createContext, useState} from 'react';
 
-//import { Tela } from '../../components/Tela';
-//import { Tela } from '../../components/Tela';
 import { Tela } from '../../components/tela'
 import { Teclado } from '../../components/teclado';
-//import { Teclado } from '../../components/Teclado';
 
-//import '../style/style.scss';
-//import { Base } from '../../style/base';
 import { MainStyled } from './style';
 
 
