@@ -247,12 +247,12 @@ export const ButtonGreen = styled(Button)`
         border-bottom: .1rem solid #0004;
         border-top: .1rem solid #43813a;
 
-        &:active{
-            background: #3e7636;
-            &::before{
-                background: #3c6e35;
-            }
-            transform: translateY(.5rem);
+    }
+    &:active{
+        background: #3e7636;
+        &::before{
+            background: #3c6e35;
         }
+        transform: translateY(.5rem);
     }
 `;
