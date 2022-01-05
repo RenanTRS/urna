@@ -1,5 +1,5 @@
 import React, { useContext, useEffect }from 'react';
-import { TesteContext } from '../../page/tome';
+import { TesteContext } from '../../page/home';
 import { fakeData } from '../fakeData';
 
 import {ConsoleStyled, EtiquetaStyled, TecladoStyled, BtnNumbersStyled, BtnActionStyled, ButtonWhite, ButtonGreen, ButtonOrange} from './style';
