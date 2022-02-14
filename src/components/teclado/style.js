@@ -9,6 +9,15 @@ export const ConsoleStyled = styled.div`
     width: 100%;
     max-width: 41.8rem;
 
+    @media (max-width: 1200px){
+        max-width: none;
+        //height: 50%;
+    }
+    @media (max-width: 1200px) and (orientation: landscape){
+        height: 100%;
+        width: initial;
+    }
+    /*
     ${media.phone}{
         max-width: none;
     }
@@ -16,6 +25,7 @@ export const ConsoleStyled = styled.div`
         height: 100%;
         width: initial;
     }
+    */
 `;
 
 export const EtiquetaStyled = styled.div`
@@ -58,9 +68,20 @@ export const TecladoStyled = styled.div`
 
     padding: 4.3rem 1rem 2.8rem;
 
-    ${media.phone}{
+    @media (max-width: 1200px){
         padding: 1rem;
 
+        border-radius: initial;
+    }
+    @media (max-width: 1200px) and (orientation: landscape){
+        flex-direction: row;
+
+        height: 100%;
+    }
+    /*
+    ${media.phone}{
+        padding: 1rem;
+        
         border-radius: initial;
     }
     ${media.phoneLandscape}{
@@ -68,6 +89,7 @@ export const TecladoStyled = styled.div`
         
         height: 100%;
     }
+    */
 `;
 
 export const BtnNumbersStyled = styled.div`
@@ -77,19 +99,34 @@ export const BtnNumbersStyled = styled.div`
 
     width: 31.2rem;
 
-    ${media.phone}{
+    @media (max-width: 1200px){
         gap: clamp(1rem, 2vh, 2.5rem) clamp(1rem, 3vw, 2.8rem);
         justify-items: center;
 
-        width: clamp(23rem, 76vw, 31.2rem);
+        width: clamp(23rem, 76vw, 38.2rem);
 
+        display: ${props => props.display || 'grid'};
+    }
+    @media (max-width: 1200px) and (orientation: landscape){
+        width: clamp(20rem, 41vw, 46rem);
+
+        gap: clamp(1rem, 9vh, 9rem) clamp(1rem, 1vw, 2.8rem);
+    }
+    /*
+    ${media.phone}{
+        gap: clamp(1rem, 2vh, 2.5rem) clamp(1rem, 3vw, 2.8rem);
+        justify-items: center;
+        
+        width: clamp(23rem, 76vw, 31.2rem);
+        
         display: ${props => props.display || 'grid'};
     }
     ${media.phoneLandscape}{
         width: clamp(20rem,41vw,31.2rem);
-
+        
         gap: clamp(1rem,2vh,2.5rem) clamp(1rem,1vw,2.8rem);
     }
+    */
 
     button{
         width: 8.4rem;
@@ -114,12 +151,22 @@ export const BtnNumbersStyled = styled.div`
         
         overflow: hidden;
         
+        @media (max-width: 1200px){
+            width: clamp(2.3rem, 24vw, 11rem);
+            height: clamp(5rem, 6vh, 7rem);
+        }
+        @media (max-width: 1200px) and (orientation: landscape){
+            width: clamp(2.3rem, 10vw, 10.5rem);
+            height: clamp(5rem,11vh,7rem);
+        }
+        /*
         ${media.phone}{
             width: clamp(2.3rem, 24vw, 8.4rem);
         }
         ${media.phoneLandscape}{
             width: clamp(2.3rem,10vw,8.4rem);
         }
+        */
 
         &:last-child{
             grid-column: 2/2;
@@ -163,16 +210,30 @@ export const BtnActionStyled = styled.div`
 
     width: 100%;
 
+    @media (max-width: 1200px){
+        max-width: 55rem;
+    }
+    @media (max-width: 1200px) and (orientation: landscape){
+        flex-direction: column;
+
+        max-width: initial;
+        width: clamp(9rem, 19vw, 18rem);
+        
+        height: 100%;
+        max-height: 66rem;
+    }
+    /*
     ${media.phone}{
         max-width: 40rem;
     }
     ${media.phoneLandscape}{
         flex-direction: column;
-
+        
         max-width: initial;
         height: 100%;
         width: clamp(9rem, 19vw, 13rem);
     }
+    */
 `;
 
 const Button = styled.button`
@@ -196,16 +257,28 @@ const Button = styled.button`
 
     position: relative;
     
+    @media (max-width: 1200px){
+        font-size: clamp(1rem, 5vw, 3rem);
+
+        height: clamp(5rem, 11vh, 11rem);
+    }
+    @media (max-width: 1200px) and (orientation: landscape){
+        justify-content: center;
+
+        height: clamp(5rem, 26vh, 12rem);
+    }
+    /*
     ${media.phone}{
         font-size: clamp(1rem, 5vw, 2.1rem);
-
+        
         height: clamp(5rem, 11vh, 8rem);
     }
     ${media.phoneLandscape}{
         justify-content: center;
-
+        
         height: clamp(5rem,26vh,8rem);
     }
+    */
     span{
         position: relative;
 
