@@ -13,7 +13,7 @@ export const TelaStyled = styled.div`
     border-radius: .8rem;
     box-shadow: inset -4px -4px 4px #F5F5F5, inset 4px 4px 0px rgba(0, 0, 0, 0.25);
 
-    ${media.phone}{
+    @media (max-width: 1200px){
         flex: 1;
 
         box-shadow: initial;
@@ -24,9 +24,37 @@ export const TelaStyled = styled.div`
         align-items: center;
         justify-content: center;
     }
+    @media (max-width: 1200px) and (orientation: landscape){
+        height: 100%;
+    }
+    /*
+    ${media.phone}{
+        flex: 1;
+        
+        box-shadow: initial;
+        border-radius: initial;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
     ${media.phoneLandscape}{
         height: 100%;
     }
+    */
+    /*
+    @media (min-width: 768px){
+        flex: 1;
+
+        box-shadow: initial;
+        border-radius: initial;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center
+    }*/
 
     h1{
         font-size: 5.2rem;

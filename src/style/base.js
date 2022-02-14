@@ -24,7 +24,7 @@ export const colors = {
 }
 
 export const media = {
-    phone: '@media (max-width: 767.98px)',
+    phone: '@media (max-width: 767.99px)',
     phoneLandscape: '@media (max-width: 767.98px) and (orientation: landscape)',
     tablet: '@media (min-width: 768px) and (max-width: 1199.98px)',
     tabletLandscape: '@media (min-width: 768px) and (max-width: 1199.98px) and (orientation: landscape)',
