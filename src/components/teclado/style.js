@@ -36,7 +36,12 @@ export const EtiquetaStyled = styled.div`
         width: 70%;
     }
 
+    /*
     ${media.phone}{
+        display: none;
+    }
+    */
+    @media (max-width: 1200px){
         display: none;
     }
 `;
