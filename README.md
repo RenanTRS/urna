@@ -46,3 +46,6 @@ $npm start
 ## Contact
 Email-me: renantrsouza@gmail.com  
 Connect with me on [LinkedIn](https://www.linkedin.com/in/renantrsouza/)
+
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE) file for details.
