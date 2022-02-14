@@ -4,7 +4,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/RenanTRS/urna)
 ![GitHub issues](https://img.shields.io/github/issues/RenanTRS/urna?color=green)
 ![GitHub last commit](https://img.shields.io/github/last-commit/RenanTRS/urna)
-![GitHub](https://img.shields.io/github/license/RenanTRS/urna)
+![GitHub license](https://img.shields.io/github/license/renantrs/urna)
 
 <img src="./design/mobile.gif">
 
