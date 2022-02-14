@@ -15,13 +15,24 @@ export const MainStyled = styled.main`
 
     padding: 3.4rem;
 
+    /*
     ${media.phone}{
+        flex-direction: column;
+        gap: 0;
+        
+        padding: 0;
+    }
+    ${media.phoneLandscape}{
+        flex-direction: row;
+    }
+    */
+    @media (max-width: 1200px){
         flex-direction: column;
         gap: 0;
 
         padding: 0;
     }
-    ${media.phoneLandscape}{
+    @media (max-width: 1200px) and (orientation: landscape){
         flex-direction: row;
     }
 `
