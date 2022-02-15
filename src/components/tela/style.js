@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, media } from '../../style/base';
+import { colors } from '../../style/base';
 
 export const TelaStyled = styled.div`
     background-color: ${colors.tela};
@@ -16,6 +16,8 @@ export const TelaStyled = styled.div`
     @media (max-width: 1200px){
         flex: 1;
 
+        max-width: initial;
+
         box-shadow: initial;
         border-radius: initial;
 
@@ -27,34 +29,6 @@ export const TelaStyled = styled.div`
     @media (max-width: 1200px) and (orientation: landscape){
         height: 100%;
     }
-    /*
-    ${media.phone}{
-        flex: 1;
-        
-        box-shadow: initial;
-        border-radius: initial;
-        
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    ${media.phoneLandscape}{
-        height: 100%;
-    }
-    */
-    /*
-    @media (min-width: 768px){
-        flex: 1;
-
-        box-shadow: initial;
-        border-radius: initial;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center
-    }*/
 
     h1{
         font-size: 5.2rem;
@@ -62,14 +36,14 @@ export const TelaStyled = styled.div`
         margin-top: 5.5rem;
         margin-left: 11.3rem;
 
-        ${media.phone}{
+        @media (max-width: 1200px){
             margin: 2rem 0 0 0;
 
             text-align: center;
             font-size: clamp(3rem, 11vw, 5.2rem);
         }
-        ${media.phoneLandscape}{
-            font-size: clamp(2rem,6vw,5.2rem);
+        @media (max-width: 1200px) and (orientation: landscape){
+            font-size: clamp(2rem, 6vw, 5.2rem);
         }
     }
 `;
@@ -81,7 +55,7 @@ export const InputsStyled = styled.div`
     margin-top: 3.1rem;
     margin-left: 8.7rem;
 
-    ${media.phone}{
+    @media (max-width: 1200px){
         justify-content: center;
         margin: 0;
     }
@@ -100,10 +74,10 @@ export const InputsStyled = styled.div`
         justify-content: center;
         align-items: center;
 
-        ${media.phone}{
+        @media (max-width: 1200px){
             height: clamp(5rem, 12vh, 6.9rem);
         }
-        ${media.phoneLandscape}{
+        @media (max-width: 1200px) and (orientation: landscape){
             width: clamp(3.4rem, 5vw, 5.4rem);
         }
     }
@@ -116,7 +90,7 @@ export const ValidoStyled = styled.div`
 
     position: relative;
 
-    ${media.phone}{
+    @media (max-width: 1200px){
         justify-content: space-evenly;
         align-items: center;
         flex-direction: column;
@@ -126,7 +100,7 @@ export const ValidoStyled = styled.div`
 
         width: 100%;
     }
-    ${media.phoneLandscape}{
+    @media (max-width: 1200px) and (orientation: landscape){
         align-items: initial;
         justify-content: initial;
     }
@@ -134,13 +108,13 @@ export const ValidoStyled = styled.div`
     header{
         max-width: 70%;
 
-        ${media.phone}{
+        @media (max-width: 1200px){
             height: clamp(0rem, 9vh, 25rem);
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-        ${media.phoneLandscape}{
+        @media (max-width: 1200px) and (orientation: landscape){
             height: clamp(0rem,16vh,25rem);
             max-width: 60%;
 
@@ -152,11 +126,11 @@ export const ValidoStyled = styled.div`
             text-transform: uppercase;
             font-size: 3.3rem;
 
-            ${media.phone}{
+            @media (max-width: 1200px){
                 text-align: center;
-                font-size: 1.8rem;
+                font-size: clamp(1.8rem, 4vw, 3.3rem);
             }
-            ${media.phoneLandscape}{
+            @media (max-width: 1200px) and (orientation: landscape){
                 text-align: initial;
             }
         }
@@ -166,10 +140,11 @@ export const ValidoStyled = styled.div`
 
             margin: 1rem 0;
 
-            ${media.phone}{
+            @media (max-width: 1200px){
                 margin: 0;
+                font-size: clamp(3.4rem, 6vw, 6rem);
             }
-            ${media.phoneLandscape}{
+            @media (max-width: 1200px) and (orientation: landscape) {
                 flex: 1;
             }
         }
@@ -185,7 +160,7 @@ export const ValidoStyled = styled.div`
         top: 0;
         right: 0;
 
-        ${media.phone}{
+        @media (max-width: 1200px){
             width: clamp(14rem, 75vw, 27.2rem);
             height: initial;
 
@@ -194,8 +169,8 @@ export const ValidoStyled = styled.div`
             position: relative;
             padding: 1rem;
         }
-        ${media.phoneLandscape}{
-            width: clamp(13rem,30vw,27.2rem);
+        @media (max-width: 1200px) and (orientation: landscape){
+            width: clamp(13rem,32vw,32.2rem);
 
             position: absolute;
         }
@@ -205,10 +180,10 @@ export const ValidoStyled = styled.div`
 export const BlockTextStyled = styled.div`
     width: 60%;
 
-    ${media.phone}{
+    @media (max-width: 1200px){
         width: 100%;
     }
-    ${media.phoneLandscape}{
+    @media (max-width: 1200px) and (orientation: landscape){
         width: 60%;
 
         flex: 2;
@@ -217,13 +192,14 @@ export const BlockTextStyled = styled.div`
     ul{
         margin: 5rem 0 0 0;
 
-        ${media.phone}{
+        @media (max-width: 1200px){
             margin-top: 0;
 
             display: flex;
             flex-direction: column;
             gap: 1rem;
         }
+
         li{
             display: grid;
             grid-template-columns: 30% 1fr;
@@ -231,7 +207,7 @@ export const BlockTextStyled = styled.div`
 
             margin-bottom: 1.5rem;
 
-            ${media.phone}{
+            @media (max-width: 1200px){
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -244,7 +220,7 @@ export const BlockTextStyled = styled.div`
                     }
                 }
             }
-            ${media.phoneLandscape}{
+            @media (max-width: 1200px) and (orientation: landscape){
                 display: grid;
                 grid-template-columns: 43% auto;
                 align-items: center;
@@ -252,10 +228,12 @@ export const BlockTextStyled = styled.div`
 
             p{
                 font-size: 2rem;
-                ${media.phone}{
+                
+                @media (max-width: 1200px){
                     display: none;
+                    font-size: clamp(2rem, 3.4vw, 5rem);
                 }
-                ${media.phoneLandscape}{
+                @media (max-width: 1200px) and (orientation: landscape){
                     display: block;
                 }
             }
@@ -263,11 +241,11 @@ export const BlockTextStyled = styled.div`
                 text-transform: uppercase;
                 font-size: 3rem;
 
-                ${media.phone}{
+                @media (max-width: 1200px){
                     font-size: clamp(1.5rem, 4.5vh, 4rem);
                     text-align: center;
                 }
-                ${media.phoneLandscape}{
+                @media (max-width: 1200px) and (orientation: landscape){
                     text-align: initial;
                     font-size: clamp(1.5rem, 4.5vw, 4rem);
                 }
@@ -289,7 +267,7 @@ export const NuloStyled = styled.div`
     header{
         max-width: 70%;
 
-        ${media.phone}{
+        @media (max-width: 1200px){
             height: clamp(0rem, 9vh, 25rem);
             width: 100%;
             max-width: initial;
@@ -303,7 +281,7 @@ export const NuloStyled = styled.div`
             text-transform: uppercase;
             font-size: 3.3rem;
 
-            ${media.phone}{
+            @media (max-width: 1200px){
                 text-align: center;
                 font-size: 1.8rem;
             }
@@ -314,19 +292,20 @@ export const NuloStyled = styled.div`
 
             margin: 1rem 0;
 
-            ${media.phone}{
+            @media (max-width: 1200px){
                 margin: 0;
             }
         }
     }
     ul{
-        ${media.phone}{
+        @media (max-width: 1200px){
             margin-top: 2rem;
         }
+        
         li{
             display: flex;
             align-items: center;
-            ${media.phone}{
+            @media (max-width: 1200px){
                 justify-content: center;
             }
             
@@ -335,8 +314,8 @@ export const NuloStyled = styled.div`
                 
                 margin-right: 2rem;
                 
-                ${media.phone}{
-                    display:none;
+                @media (max-width: 1200px){
+                    display: none;
                 }
             }
             div{
@@ -376,7 +355,7 @@ export const FimStyled = styled.div`
         
         margin: 0;
 
-        ${media.phone}{
+        @media (max-width: 1200px){
             font-size: clamp(15rem, 40vw, 24rem);
         }
     }
