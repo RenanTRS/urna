@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { media } from '../../style/base'
 
 export const FooterStyled = styled.footer`
     border-top: .3rem solid black;
@@ -8,10 +7,15 @@ export const FooterStyled = styled.footer`
 
     padding: 2rem;
 
-    ${media.phone}{
+    @media (max-width: 1200px){
         display: none;
+    }
+    @media (min-height: 767px) and (max-width: 1200px) and (orientation: landscape){
+        display: initial;
+        
+        font-size: clamp(1.6rem, 4vw, 3rem);
 
-        font-size: clamp(1.6rem, 4vw, 2rem);
+        width: 100%;
     }
     span{
         display: block;
