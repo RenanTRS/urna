@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 import { colors } from '../../style/base';
-//import {media} from '../../style/media';
-import { media } from '../../style/base';
 
 export const MainStyled = styled.main`
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 7.4rem;
 
     background-color: ${colors.body};
@@ -15,17 +14,6 @@ export const MainStyled = styled.main`
 
     padding: 3.4rem;
 
-    /*
-    ${media.phone}{
-        flex-direction: column;
-        gap: 0;
-        
-        padding: 0;
-    }
-    ${media.phoneLandscape}{
-        flex-direction: row;
-    }
-    */
     @media (max-width: 1200px){
         flex-direction: column;
         gap: 0;
