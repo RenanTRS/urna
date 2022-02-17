@@ -93,7 +93,7 @@ export function Tela(){
             {(status === 3) &&
                 <TelaStyled>
                     <div className='branco'>
-                        <h1>Voto Branco</h1>
+                        <h2>Voto Branco</h2>
                     </div>
                     <Footer />
                 </TelaStyled>
