@@ -44,8 +44,8 @@ export function Teclado(){
         setStatus(0);
     }
     const confirma = (event) => {
-        setStatus(4);
         const song = event.target.childNodes[1]
+        setStatus(4);
         song.play();
         setTimeout(() => {
             setNumOne('');
