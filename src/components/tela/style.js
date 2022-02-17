@@ -32,9 +32,9 @@ export const TelaStyled = styled.div`
 
     h1{
         font-size: 5.2rem;
+        text-align: center;
 
-        margin-top: 5.5rem;
-        margin-left: 11.3rem;
+        margin-top: clamp(5.5rem, 15vh, 13rem);
 
         @media (max-width: 1200px){
             margin: 2rem 0 0 0;
