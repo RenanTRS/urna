@@ -5,6 +5,7 @@ import { fakeData } from '../fakeData';
 import {ConsoleStyled, EtiquetaStyled, TecladoStyled, BtnNumbersStyled, BtnActionStyled, ButtonWhite, ButtonGreen, ButtonOrange} from './style';
 
 import brasaoImg from '../../assets/image/brasao.png'
+import songConfirm from '../../assets/song/vote-confirm.mp3'
 
 export function Teclado(){
     const {numOne, setNumOne, setNumTwo, status, setStatus, numero, setNumero, setCandidate} = useContext(TesteContext);
@@ -42,8 +43,10 @@ export function Teclado(){
         setNumTwo('');
         setStatus(0);
     }
-    const confirma = () => {
+    const confirma = (event) => {
         setStatus(4);
+        const song = event.target.childNodes[1]
+        song.play();
         setTimeout(() => {
             setNumOne('');
             setNumTwo('');
@@ -74,7 +77,10 @@ export function Teclado(){
                 <BtnActionStyled>
                     <ButtonWhite type="button" onClick={branco}><span>branco</span></ButtonWhite>
                     <ButtonOrange type="button" onClick={corrige}><span>corrige</span></ButtonOrange>
-                    <ButtonGreen type="button" onClick={confirma}><span>confirma</span></ButtonGreen>
+                    <ButtonGreen type="button" onClick={(event)=> confirma(event)}>
+                        <span>confirma</span>
+                        <audio src={songConfirm}></audio>
+                    </ButtonGreen>
                 </BtnActionStyled>
             </TecladoStyled>
         </ConsoleStyled>
