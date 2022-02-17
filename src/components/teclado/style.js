@@ -112,21 +112,6 @@ export const BtnNumbersStyled = styled.div`
 
         gap: clamp(1rem, 9vh, 9rem) clamp(1rem, 1vw, 2.8rem);
     }
-    /*
-    ${media.phone}{
-        gap: clamp(1rem, 2vh, 2.5rem) clamp(1rem, 3vw, 2.8rem);
-        justify-items: center;
-        
-        width: clamp(23rem, 76vw, 31.2rem);
-        
-        display: ${props => props.display || 'grid'};
-    }
-    ${media.phoneLandscape}{
-        width: clamp(20rem,41vw,31.2rem);
-        
-        gap: clamp(1rem,2vh,2.5rem) clamp(1rem,1vw,2.8rem);
-    }
-    */
 
     button{
         width: 8.4rem;
@@ -159,14 +144,6 @@ export const BtnNumbersStyled = styled.div`
             width: clamp(2.3rem, 10vw, 10.5rem);
             height: clamp(5rem,11vh,7rem);
         }
-        /*
-        ${media.phone}{
-            width: clamp(2.3rem, 24vw, 8.4rem);
-        }
-        ${media.phoneLandscape}{
-            width: clamp(2.3rem,10vw,8.4rem);
-        }
-        */
 
         &:last-child{
             grid-column: 2/2;
