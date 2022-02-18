@@ -11,8 +11,8 @@
     <img src="https://img.shields.io/github/license/renantrs/urna" alt="GitHub license" />
     <br>
 </p>
-<p align="center">
-    <img src="./design/desktop.gif" alt="Demo on Vercel">
+<p align="center" style="background: white">
+    <img src="./design/desk.gif" alt="Demo on Vercel">
 </p>
 
 ## About this project
