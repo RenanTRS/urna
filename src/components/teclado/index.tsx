@@ -19,7 +19,6 @@ export function Teclado(){
             if(number){
                 const person = db.filter(item => item.number === numero)
                 if(person.length > 0){
-                    //console.log('maior')
                     setCandidate(person)
                 }
                 setTimeout(() => {
