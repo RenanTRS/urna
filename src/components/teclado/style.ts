@@ -91,8 +91,10 @@ export const TecladoStyled = styled.div`
     }
     */
 `;
-
-export const BtnNumbersStyled = styled.div`
+type BtnNumbersStyledType = {
+    display?: any;
+}
+export const BtnNumbersStyled = styled.div<BtnNumbersStyledType>`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2.5rem 2.8rem;

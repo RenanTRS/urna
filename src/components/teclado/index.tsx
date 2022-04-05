@@ -1,6 +1,6 @@
-import React, { useContext, useEffect }from 'react';
+import React, { FormEvent, useContext, useEffect }from 'react';
 import { TesteContext } from '../../page/home';
-import { fakeData } from '../fakeData';
+import { fakeData } from '../../data/fakeData';
 
 import {ConsoleStyled, EtiquetaStyled, TecladoStyled, BtnNumbersStyled, BtnActionStyled, ButtonWhite, ButtonGreen, ButtonOrange} from './style';
 
@@ -27,7 +27,7 @@ export function Teclado(){
         }
     },[numero])
     
-    function handlePress(valor){
+    function handlePress(valor: string){
         if(numOne === ''){
             setNumOne(valor);
         } else{
@@ -43,7 +43,8 @@ export function Teclado(){
         setNumTwo('');
         setStatus(0);
     }
-    const confirma = (event) => {
+    const confirma = (event :FormEvent<HTMLButtonElement>) => {
+        console.log(event)
         const song = event.target.childNodes[1]
         setStatus(4);
         song.play();
