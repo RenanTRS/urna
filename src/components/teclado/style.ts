@@ -11,21 +11,11 @@ export const ConsoleStyled = styled.div`
 
     @media (max-width: 1200px){
         max-width: none;
-        //height: 50%;
     }
     @media (max-width: 1200px) and (orientation: landscape){
         height: 100%;
         width: initial;
     }
-    /*
-    ${media.phone}{
-        max-width: none;
-    }
-    ${media.phoneLandscape}{
-        height: 100%;
-        width: initial;
-    }
-    */
 `;
 
 export const EtiquetaStyled = styled.div`
@@ -46,11 +36,6 @@ export const EtiquetaStyled = styled.div`
         width: 70%;
     }
 
-    /*
-    ${media.phone}{
-        display: none;
-    }
-    */
     @media (max-width: 1200px){
         display: none;
     }
@@ -78,21 +63,9 @@ export const TecladoStyled = styled.div`
 
         height: 100%;
     }
-    /*
-    ${media.phone}{
-        padding: 1rem;
-        
-        border-radius: initial;
-    }
-    ${media.phoneLandscape}{
-        flex-direction: row;
-        
-        height: 100%;
-    }
-    */
 `;
-type BtnNumbersStyledType = {
-    display?: any;
+type BtnNumbersStyledType = { //Any
+    display?: any; 
 }
 export const BtnNumbersStyled = styled.div<BtnNumbersStyledType>`
     display: grid;
@@ -201,18 +174,6 @@ export const BtnActionStyled = styled.div`
         height: 100%;
         max-height: 66rem;
     }
-    /*
-    ${media.phone}{
-        max-width: 40rem;
-    }
-    ${media.phoneLandscape}{
-        flex-direction: column;
-        
-        max-width: initial;
-        height: 100%;
-        width: clamp(9rem, 19vw, 13rem);
-    }
-    */
 `;
 
 const Button = styled.button`
@@ -246,18 +207,7 @@ const Button = styled.button`
 
         height: clamp(5rem, 26vh, 12rem);
     }
-    /*
-    ${media.phone}{
-        font-size: clamp(1rem, 5vw, 2.1rem);
-        
-        height: clamp(5rem, 11vh, 8rem);
-    }
-    ${media.phoneLandscape}{
-        justify-content: center;
-        
-        height: clamp(5rem,26vh,8rem);
-    }
-    */
+    
     span{
         position: relative;
 
