@@ -1,12 +1,12 @@
-import React, {useContext} from 'react';
-import { TesteContext } from 'page/home';
-import {TelaStyled, InputsStyled, ValidoStyled, BlockTextStyled, NumStyled, NuloStyled, FimStyled} from './style'
+import { useContext } from 'react';
+import { DataContext } from 'context/DataContext'
+import { TelaStyled, InputsStyled, ValidoStyled, BlockTextStyled, NumStyled, NuloStyled, FimStyled } from './style'
 
 import { Footer } from '../footer'
 
 export function Tela(){
 
-    const {numOne, numTwo, status, candidate} = useContext(TesteContext);
+    const {numOne, numTwo, status, candidate} = useContext(DataContext);
 
     return(
         <>
@@ -26,8 +26,11 @@ export function Tela(){
                             <p>Seu voto para</p>
                             <h1>Presidente</h1>
                         </header>
-                        
-                        <img src={candidate.avatar} alt="Candidato" />
+                        {candidate?.map((item, key) =>{
+                            return (
+                                <img src={item.avatar} alt="Candidato" key={key}/>
+                            )
+                        })}
                         
                         <BlockTextStyled>
                             <ul>
@@ -45,12 +48,20 @@ export function Tela(){
                                 
                                 <li>
                                     <p>Nome:</p>
-                                    <span>{candidate.name}</span>
+                                    {candidate?.map((item, key) => {
+                                        return (
+                                            <span key={key}>{item.name}</span>
+                                        )
+                                    })}
                                 </li>
                                 
                                 <li>
                                     <p>Partido:</p>
-                                    <span>{candidate.partido}</span>
+                                    {candidate?.map((item, key)=>{
+                                        return (
+                                            <span key={key}>{item?.partido}</span>
+                                        )
+                                    })}
                                 </li>
                             </ul>
                         </BlockTextStyled>

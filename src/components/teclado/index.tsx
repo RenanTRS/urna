@@ -1,7 +1,7 @@
 import { FormEvent, useContext, useEffect } from 'react';
 
-import {TesteContext} from 'page/home'
-import { fakeData } from 'data/fakeData';
+import {DataContext} from 'context/DataContext'
+import db from 'data/db.json'
 
 import {ConsoleStyled, EtiquetaStyled, TecladoStyled, BtnNumbersStyled, BtnActionStyled, ButtonWhite, ButtonGreen, ButtonOrange} from './style';
 
@@ -9,18 +9,23 @@ import brasaoImg from 'assets/image/brasao.png'
 import songConfirm from 'assets/song/vote-confirm.mp3'
 
 export function Teclado(){
-    const {numOne, setNumOne, setNumTwo, status, setStatus, numero, setNumero, setCandidate} = useContext(TesteContext);
+    const {numOne, setNumOne, setNumTwo, status, setStatus, numero, setNumero, setCandidate} = useContext(DataContext);
 
     useEffect(()=>{
         //Atualiza sempre que o state numero é modificado
         if(numero !== ''){ //Apenas se for diferente de vazio
-            if(fakeData[numero]){
-                setCandidate(fakeData[numero]);
+            const number = db.find(item => item.number === numero)
+
+            if(number){
+                const person = db.filter(item => item.number === numero)
+                if(person.length > 0){
+                    //console.log('maior')
+                    setCandidate(person)
+                }
                 setTimeout(() => {
                     setStatus(1);
                 }, 1000)
-            }else{
-                console.log('não tem');
+            } else {
                 setTimeout(() => {
                     setStatus(2);
                 }, 1000)
@@ -45,7 +50,7 @@ export function Teclado(){
         setStatus(0);
     }
     const confirma = (event :FormEvent<any>) => { //any
-        console.log(event)
+        //console.log(event)
         const song = event.currentTarget.childNodes[1]
         setStatus(4);
         song.play();
