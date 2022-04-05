@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import { TesteContext } from '../../page/home';
+import { TesteContext } from 'page/home';
 import {TelaStyled, InputsStyled, ValidoStyled, BlockTextStyled, NumStyled, NuloStyled, FimStyled} from './style'
 
 import { Footer } from '../footer'

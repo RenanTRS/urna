@@ -1,11 +1,12 @@
-import React, { FormEvent, useContext, useEffect }from 'react';
-import { TesteContext } from '../../page/home';
-import { fakeData } from '../../data/fakeData';
+import { FormEvent, useContext, useEffect } from 'react';
+
+import {TesteContext} from 'page/home'
+import { fakeData } from 'data/fakeData';
 
 import {ConsoleStyled, EtiquetaStyled, TecladoStyled, BtnNumbersStyled, BtnActionStyled, ButtonWhite, ButtonGreen, ButtonOrange} from './style';
 
-import brasaoImg from '../../assets/image/brasao.png'
-import songConfirm from '../../assets/song/vote-confirm.mp3'
+import brasaoImg from 'assets/image/brasao.png'
+import songConfirm from 'assets/song/vote-confirm.mp3'
 
 export function Teclado(){
     const {numOne, setNumOne, setNumTwo, status, setStatus, numero, setNumero, setCandidate} = useContext(TesteContext);
@@ -43,9 +44,9 @@ export function Teclado(){
         setNumTwo('');
         setStatus(0);
     }
-    const confirma = (event :FormEvent<HTMLButtonElement>) => {
+    const confirma = (event :FormEvent<any>) => { //any
         console.log(event)
-        const song = event.target.childNodes[1]
+        const song = event.currentTarget.childNodes[1]
         setStatus(4);
         song.play();
         setTimeout(() => {
