@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Doguinho Caramelo",
+        "number": "10",
+        "avatar": "/assets/dog.png",
+        "partido": "RUA"
+    },
+    {
+        "name": "Julius",
+        "number": "28",
+        "avatar": "/assets/julius.png",
+        "partido": "Desconto"
+    },
+    {
+        "name": "Seu Madruga",
+        "number": "72",
+        "avatar": "/assets/madruga.png",
+        "partido": "Chaves"
+    },
+    {
+        "name": "Agostinho Carrara",
+        "number": "51",
+        "avatar": "/assets/agostinho.png",
+        "partido": "Partido Carrara"
+    }
+]
