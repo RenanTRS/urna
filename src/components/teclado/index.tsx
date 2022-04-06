@@ -35,7 +35,7 @@ export function Teclado(){
     function handlePress(valor: string){
         if(numOne === ''){
             setNumOne(valor);
-        } else{
+        } else if(numTwo === ''){
             setNumTwo(valor);
             setNumero(numOne+valor);
         }  
