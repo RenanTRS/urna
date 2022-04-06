@@ -67,7 +67,7 @@ export function Teclado(){
                 <span>Justiça Eleitoral</span>
             </EtiquetaStyled>
             <TecladoStyled>
-                <BtnNumbersStyled display={(status !== 0) && 'none'}>
+                <BtnNumbersStyled showKeyB={status === 0}>
                     <button type="button" onClick={event => handlePress('1')}><span>1</span></button>
                     <button type="button" onClick={event => handlePress('2')}><span>2</span></button>
                     <button type="button" onClick={event => handlePress('3')}><span>3</span></button>
