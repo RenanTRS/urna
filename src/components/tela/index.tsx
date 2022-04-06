@@ -1,8 +1,18 @@
 import { useContext } from 'react';
 import { DataContext } from 'context/DataContext'
-import { TelaStyled, InputsStyled, ValidoStyled, BlockTextStyled, NumStyled, NuloStyled, FimStyled } from './style'
 
 import { Footer } from '../footer'
+
+//Style
+import { 
+    TelaStyled, 
+    InputsStyled, 
+    ValidoStyled, 
+    BlockTextStyled, 
+    NumStyled, 
+    NuloStyled, 
+    FimStyled 
+} from './style'
 
 export function Tela(){
 
@@ -26,11 +36,8 @@ export function Tela(){
                             <p>Seu voto para</p>
                             <h1>Presidente</h1>
                         </header>
-                        {candidate?.map((item, key) =>{
-                            return (
-                                <img src={item.avatar} alt="Candidato" key={key}/>
-                            )
-                        })}
+                        
+                        <img src={candidate?.avatar} alt="Candidato" />
                         
                         <BlockTextStyled>
                             <ul>
@@ -48,20 +55,12 @@ export function Tela(){
                                 
                                 <li>
                                     <p>Nome:</p>
-                                    {candidate?.map((item, key) => {
-                                        return (
-                                            <span key={key}>{item.name}</span>
-                                        )
-                                    })}
+                                    <span>{candidate?.name}</span>
                                 </li>
                                 
                                 <li>
                                     <p>Partido:</p>
-                                    {candidate?.map((item, key)=>{
-                                        return (
-                                            <span key={key}>{item?.partido}</span>
-                                        )
-                                    })}
+                                    <span>{candidate?.partido}</span>
                                 </li>
                             </ul>
                         </BlockTextStyled>
