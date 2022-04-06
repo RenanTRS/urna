@@ -65,7 +65,7 @@ export const TecladoStyled = styled.div`
     }
 `;
 type BtnNumbersStyledType = { //Any
-    display?: any; 
+    showKeyB?: boolean; 
 }
 export const BtnNumbersStyled = styled.div<BtnNumbersStyledType>`
     display: grid;
@@ -80,7 +80,7 @@ export const BtnNumbersStyled = styled.div<BtnNumbersStyledType>`
 
         width: clamp(23rem, 76vw, 38.2rem);
 
-        display: ${props => props.display || 'grid'};
+        display: ${props => props.showKeyB ?'grid' : 'none'};
     }
     @media (max-width: 1200px) and (orientation: landscape){
         width: clamp(20rem, 41vw, 46rem);
