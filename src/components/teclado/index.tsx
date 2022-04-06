@@ -1,32 +1,31 @@
 import { useContext, useEffect, useRef } from 'react';
+import {DataContext} from 'context/DataContext' //Context
 
-import {DataContext} from 'context/DataContext'
-import db from 'data/db.json'
+import db from 'data/db.json' //database
 
+//Style
 import {ConsoleStyled, EtiquetaStyled, TecladoStyled, BtnNumbersStyled, BtnActionStyled, ButtonWhite, ButtonGreen, ButtonOrange} from './style';
 
+//Assets
 import brasaoImg from 'assets/image/brasao.png'
 import songConfirm from 'assets/song/vote-confirm.mp3'
 
 export function Teclado(){
-    const {numOne, setNumOne, setNumTwo, status, setStatus, numero, setNumero, setCandidate} = useContext(DataContext);
+    const {numOne, setNumOne, numTwo, setNumTwo, status, setStatus, numero, setNumero, setCandidate} = useContext(DataContext);
 
     useEffect(()=>{
-        //Atualiza sempre que o state numero é modificado
-        if(numero !== ''){ //Apenas se for diferente de vazio
+        if(numero !== ''){
+            
             const number = db.find(item => item.number === numero) //Find number in json
-
             if(number){
-                const person = db.filter(item => item.number === numero) //Get candidate
-                if(person.length > 0){
-                    setCandidate(person)
-                }
+                setCandidate(number)
+
                 setTimeout(() => {
-                    setStatus(1);
+                    setStatus(1); //change screen, new vote
                 }, 1000)
             } else {
                 setTimeout(() => {
-                    setStatus(2);
+                    setStatus(2); //change screen, null vote
                 }, 1000)
             }
         }
@@ -41,7 +40,7 @@ export function Teclado(){
         }  
     }
     const branco = () => {
-        setStatus(3);
+        setStatus(3); //change screen, White vote
     }
     const corrige = () => {
         setNumOne('');
@@ -50,7 +49,7 @@ export function Teclado(){
     }
     const audioConfirm = useRef<HTMLAudioElement>(null)
     const confirma = () => {
-        setStatus(4); //change screen
+        setStatus(4); //change screen, Confirm vote
         audioConfirm.current?.play() //Play song
 
         setTimeout(() => {
@@ -68,16 +67,16 @@ export function Teclado(){
             </EtiquetaStyled>
             <TecladoStyled>
                 <BtnNumbersStyled showKeyB={status === 0}>
-                    <button type="button" onClick={event => handlePress('1')}><span>1</span></button>
-                    <button type="button" onClick={event => handlePress('2')}><span>2</span></button>
-                    <button type="button" onClick={event => handlePress('3')}><span>3</span></button>
-                    <button type="button" onClick={event => handlePress('4')}><span>4</span></button>
-                    <button type="button" onClick={event => handlePress('5')}><span>5</span></button>
-                    <button type="button" onClick={event => handlePress('6')}><span>6</span></button>
-                    <button type="button" onClick={event => handlePress('7')}><span>7</span></button>
-                    <button type="button" onClick={event => handlePress('8')}><span>8</span></button>
-                    <button type="button" onClick={event => handlePress('9')}><span>9</span></button>
-                    <button type="button" onClick={event => handlePress('0')}><span>0</span></button>
+                    <button type="button" onClick={() => handlePress('1')}><span>1</span></button>
+                    <button type="button" onClick={() => handlePress('2')}><span>2</span></button>
+                    <button type="button" onClick={() => handlePress('3')}><span>3</span></button>
+                    <button type="button" onClick={() => handlePress('4')}><span>4</span></button>
+                    <button type="button" onClick={() => handlePress('5')}><span>5</span></button>
+                    <button type="button" onClick={() => handlePress('6')}><span>6</span></button>
+                    <button type="button" onClick={() => handlePress('7')}><span>7</span></button>
+                    <button type="button" onClick={() => handlePress('8')}><span>8</span></button>
+                    <button type="button" onClick={() => handlePress('9')}><span>9</span></button>
+                    <button type="button" onClick={() => handlePress('0')}><span>0</span></button>
                 </BtnNumbersStyled>
                 
                 <BtnActionStyled>
