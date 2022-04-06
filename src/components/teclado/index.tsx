@@ -1,4 +1,4 @@
-import { FormEvent, useContext, useEffect } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 
 import {DataContext} from 'context/DataContext'
 import db from 'data/db.json'
@@ -14,10 +14,10 @@ export function Teclado(){
     useEffect(()=>{
         //Atualiza sempre que o state numero é modificado
         if(numero !== ''){ //Apenas se for diferente de vazio
-            const number = db.find(item => item.number === numero)
+            const number = db.find(item => item.number === numero) //Find number in json
 
             if(number){
-                const person = db.filter(item => item.number === numero)
+                const person = db.filter(item => item.number === numero) //Get candidate
                 if(person.length > 0){
                     setCandidate(person)
                 }
@@ -48,11 +48,11 @@ export function Teclado(){
         setNumTwo('');
         setStatus(0);
     }
-    const confirma = (event :FormEvent<any>) => { //any
-        //console.log(event)
-        const song = event.currentTarget.childNodes[1]
-        setStatus(4);
-        song.play();
+    const audioConfirm = useRef<HTMLAudioElement>(null)
+    const confirma = () => {
+        setStatus(4); //change screen
+        audioConfirm.current?.play() //Play song
+
         setTimeout(() => {
             setNumOne('');
             setNumTwo('');
@@ -83,9 +83,9 @@ export function Teclado(){
                 <BtnActionStyled>
                     <ButtonWhite type="button" onClick={branco}><span>branco</span></ButtonWhite>
                     <ButtonOrange type="button" onClick={corrige}><span>corrige</span></ButtonOrange>
-                    <ButtonGreen type="button" onClick={(event)=> confirma(event)}>
+                    <ButtonGreen type="button" onClick={()=> confirma()}>
                         <span>confirma</span>
-                        <audio src={songConfirm}></audio>
+                        <audio ref={audioConfirm} src={songConfirm}></audio>
                     </ButtonGreen>
                 </BtnActionStyled>
             </TecladoStyled>
