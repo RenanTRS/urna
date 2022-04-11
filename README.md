@@ -40,15 +40,19 @@ $ yarn
 $ npm install
 
 #Run
-$ yarn start
+$ yarn dev
 #or
 $ npm start
 ```
 
 ## Built With
 
+- [Vite](https://vitejs.dev/guide/#scaffolding-your-first-vite-project)
 - [ReactJs](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
 - [styled-components](https://styled-components.com/)
+- [EsLint](https://eslint.org/)
+- [Prettier](https://prettier.io/docs/en/index.html)
 
 ## Contact
 
