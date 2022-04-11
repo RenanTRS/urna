@@ -11,18 +11,22 @@
     <img src="https://img.shields.io/github/license/renantrs/urna" alt="GitHub license" />
     <br>
 </p>
-<p align="center" style="background: white">
+<p align="center" style="background-image: url('./design/background.png');">
     <img src="./design/desk.gif" alt="Demo on Vercel">
 </p>
 
 ## About this project
+
 This project is part of my personal portfolio.
 
 ## Why?
+
 The purpose of this project was to learn styled-components
 
 ## How to use
+
 To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js v14.19](https://nodejs.org/) or higher + [Yarn v1.22.15](https://yarnpkg.com/) or higher installed on your computer. From your command line:
+
 ```bash
 #Cloning this respository
 $ git clone https://github.com/RenanTRS/urna.git
@@ -42,12 +46,15 @@ $ npm start
 ```
 
 ## Built With
-- [ReactJs](https://reactjs.org/)  
+
+- [ReactJs](https://reactjs.org/)
 - [styled-components](https://styled-components.com/)
 
 ## Contact
+
 Email-me: renantrsouza@gmail.com  
 Connect with me on [LinkedIn](https://www.linkedin.com/in/renantrsouza/)
 
 ## License
+
 This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE) file for details.
