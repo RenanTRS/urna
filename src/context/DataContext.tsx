@@ -9,17 +9,17 @@ import db from 'data/db.json' //database
 
 type CandidateType = typeof db[0] //type equal db
 
-interface IDataContext {
+export interface IDataContext {
   numOne?: string
-  setNumOne?: Dispatch<SetStateAction<string>>
+  setNumOne: Dispatch<SetStateAction<string>>
   numTwo?: string
-  setNumTwo?: Dispatch<SetStateAction<string>>
+  setNumTwo: Dispatch<SetStateAction<string>>
   status?: number
-  setStatus?: Dispatch<SetStateAction<number>>
+  setStatus: Dispatch<SetStateAction<number>>
   numero?: string
-  setNumero?: Dispatch<SetStateAction<string>>
+  setNumero: Dispatch<SetStateAction<string>>
   candidate?: CandidateType
-  setCandidate?: Dispatch<
+  setCandidate: Dispatch<
     SetStateAction<
       | {
           name: string

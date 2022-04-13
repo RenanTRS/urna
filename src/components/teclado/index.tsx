@@ -12,7 +12,7 @@ import {
   BtnActionStyled,
   ButtonWhite,
   ButtonGreen,
-  ButtonOrange,
+  ButtonOrange
 } from './style'
 
 //Assets
@@ -29,7 +29,7 @@ export const Teclado = () => {
     setStatus,
     numero,
     setNumero,
-    setCandidate,
+    setCandidate
   } = useContext(DataContext)
 
   useEffect(() => {
