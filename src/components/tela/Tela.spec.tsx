@@ -18,7 +18,7 @@ describe('Tela component', () => {
 
   type ValuePropsTest = typeof value
 
-  const Provider = (value: ValuePropsTest) => {
+  const Provider = (value: ValuePropsTest | any) => {
     return render(
       <DataContext.Provider value={value}>
         <Tela />
