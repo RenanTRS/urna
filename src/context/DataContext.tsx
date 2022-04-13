@@ -3,20 +3,20 @@ import {
   Dispatch,
   ReactNode,
   SetStateAction,
-  useState,
+  useState
 } from 'react'
 import db from 'data/db.json' //database
 
 type CandidateType = typeof db[0] //type equal db
 
-interface IDataContext {
-  numOne: string
+export interface IDataContext {
+  numOne?: string
   setNumOne: Dispatch<SetStateAction<string>>
-  numTwo: string
+  numTwo?: string
   setNumTwo: Dispatch<SetStateAction<string>>
-  status: number
+  status?: number
   setStatus: Dispatch<SetStateAction<number>>
-  numero: string
+  numero?: string
   setNumero: Dispatch<SetStateAction<string>>
   candidate?: CandidateType
   setCandidate: Dispatch<
@@ -54,7 +54,8 @@ export const DataContextProvider = ({ children }: Props) => {
     numero,
     setNumero,
     candidate,
-    setCandidate,
+    setCandidate
   }
+
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>
 }

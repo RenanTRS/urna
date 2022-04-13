@@ -12,7 +12,7 @@ import {
   BtnActionStyled,
   ButtonWhite,
   ButtonGreen,
-  ButtonOrange,
+  ButtonOrange
 } from './style'
 
 //Assets
@@ -29,7 +29,7 @@ export const Teclado = () => {
     setStatus,
     numero,
     setNumero,
-    setCandidate,
+    setCandidate
   } = useContext(DataContext)
 
   useEffect(() => {
@@ -82,48 +82,96 @@ export const Teclado = () => {
         <img src={brasaoImg} alt="Logo" />
         <span>Justiça Eleitoral</span>
       </EtiquetaStyled>
-      <TecladoStyled>
+      <TecladoStyled data-testid="keyboard">
         <BtnNumbersStyled showKeyB={status === 0}>
-          <button type="button" onClick={() => handlePress('1')}>
+          <button
+            type="button"
+            data-testid="num-btn"
+            onClick={() => handlePress('1')}
+          >
             <span>1</span>
           </button>
-          <button type="button" onClick={() => handlePress('2')}>
+          <button
+            type="button"
+            data-testid="num-btn"
+            onClick={() => handlePress('2')}
+          >
             <span>2</span>
           </button>
-          <button type="button" onClick={() => handlePress('3')}>
+          <button
+            type="button"
+            data-testid="num-btn"
+            onClick={() => handlePress('3')}
+          >
             <span>3</span>
           </button>
-          <button type="button" onClick={() => handlePress('4')}>
+          <button
+            type="button"
+            data-testid="num-btn"
+            onClick={() => handlePress('4')}
+          >
             <span>4</span>
           </button>
-          <button type="button" onClick={() => handlePress('5')}>
+          <button
+            type="button"
+            data-testid="num-btn"
+            onClick={() => handlePress('5')}
+          >
             <span>5</span>
           </button>
-          <button type="button" onClick={() => handlePress('6')}>
+          <button
+            type="button"
+            data-testid="num-btn"
+            onClick={() => handlePress('6')}
+          >
             <span>6</span>
           </button>
-          <button type="button" onClick={() => handlePress('7')}>
+          <button
+            type="button"
+            data-testid="num-btn"
+            onClick={() => handlePress('7')}
+          >
             <span>7</span>
           </button>
-          <button type="button" onClick={() => handlePress('8')}>
+          <button
+            type="button"
+            data-testid="num-btn"
+            onClick={() => handlePress('8')}
+          >
             <span>8</span>
           </button>
-          <button type="button" onClick={() => handlePress('9')}>
+          <button
+            type="button"
+            data-testid="num-btn"
+            onClick={() => handlePress('9')}
+          >
             <span>9</span>
           </button>
-          <button type="button" onClick={() => handlePress('0')}>
+          <button
+            type="button"
+            data-testid="num-btn"
+            onClick={() => handlePress('0')}
+          >
             <span>0</span>
           </button>
         </BtnNumbersStyled>
 
         <BtnActionStyled>
-          <ButtonWhite type="button" onClick={branco}>
+          <ButtonWhite type="button" data-testid="action-btn" onClick={branco}>
             <span>branco</span>
           </ButtonWhite>
-          <ButtonOrange type="button" onClick={corrige}>
+          <ButtonOrange
+            type="button"
+            data-testid="action-btn"
+            onClick={corrige}
+          >
             <span>corrige</span>
           </ButtonOrange>
-          <ButtonGreen type="button" onClick={() => confirma()}>
+          <ButtonGreen
+            type="button"
+            data-testid="action-btn"
+            onClick={() => confirma()}
+          >
             <span>confirma</span>
             <audio ref={audioConfirm} src={songConfirm}></audio>
           </ButtonGreen>
