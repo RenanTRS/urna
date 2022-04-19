@@ -12,8 +12,16 @@
     <br>
 </p>
 <p align="center" style="background-image: url('./design/background.png');">
-    <img src="./design/desk.gif" alt="Demo on Vercel">
+    <img src="./design/desktop.gif" alt="Demo desktop" width="70%" />
+    <img src="./design/mobile.gif" alt="Demo mobile" width="15%"/>
 </p>
+
+> ### Candidates
+>
+> - 10: Doguinho Caramelo
+> - 28: Julius
+> - 51: Agostinho Carrara
+> - 72: Seu Madruga
 
 ## About this project
 
@@ -53,6 +61,10 @@ $ npm start
 - [styled-components](https://styled-components.com/)
 - [EsLint](https://eslint.org/)
 - [Prettier](https://prettier.io/docs/en/index.html)
+- [Jest](https://jestjs.io/pt-BR/docs/getting-started)
+- [Testing-library](https://testing-library.com/docs/)
+- [@swc/jest](https://swc.rs/docs/usage/jest)
+- [@swc/core](https://swc.rs/docs/usage/core)
 
 ## Contact
 
