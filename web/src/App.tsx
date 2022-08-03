@@ -1,13 +1,12 @@
-import { Reset } from "./style/reset"
-import { Base } from "./style/base"
-import { Home } from "./page/home"
+import { Reset } from './style/Reset.style'
+import { GlobalStyle } from './style/Global.style'
+import { Home } from './page/home'
 
 function App() {
-
   return (
     <>
       <Reset />
-      <Base />
+      <GlobalStyle />
       <Home />
     </>
   )
