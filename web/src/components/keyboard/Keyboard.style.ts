@@ -29,6 +29,9 @@ export const Tag = styled.div`
   border-radius: 0.5rem;
   box-shadow: inset -4px -4px 4px #f5f5f5, inset 4px 4px 0px rgba(0, 0, 0, 0.25);
 
+  img {
+    pointer-events: none;
+  }
   span {
     font-size: 4.5rem;
     text-align: center;
