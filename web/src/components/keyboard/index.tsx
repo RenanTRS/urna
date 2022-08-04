@@ -1,14 +1,21 @@
+import { useEffect, useRef, useState } from 'react'
+
 import * as S from './Keyboard.style'
 
+import { CandidateType } from 'types/candidate' //type
+import { statusType } from 'types/status'
+import { candidates } from 'data/db'
+
+//Assets
 import brasaoImg from 'assets/images/brasao.png'
 import songConfirm from 'assets/song/vote-confirm.mp3'
 
-import { ButtonNumber } from 'components/buttonNumber'
-import { ButtonGreen, ButtonOrange, ButtonWhite } from 'components/buttonAction'
-import { useEffect, useState } from 'react'
-import { statusType } from 'types/status'
-import { candidates } from 'data/db'
-import { CandidateType } from 'types/candidate'
+import { ButtonNumber } from 'components/buttons/buttonNumber'
+import {
+  ButtonGreen,
+  ButtonOrange,
+  ButtonWhite
+} from 'components/buttons/buttonAction'
 
 interface KeyboardProps {
   handlerNumber: (value: string) => void
@@ -17,11 +24,14 @@ interface KeyboardProps {
 
 export const Keyboard = ({ handlerNumber, handlerStatus }: KeyboardProps) => {
   const [num, setNum] = useState<string[]>([])
+
+  //Controllers
   const [blockNumbers, setBlockNumbers] = useState<boolean>(false)
   const [blockOrange, setBlockOrange] = useState<boolean>(true)
   const [blockGreen, setBlockGreen] = useState<boolean>(true)
 
-  const btnNum = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+  const btnNum = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'] //wrapper
+  const audioConfirm = useRef<HTMLAudioElement>(null) //audio
 
   const handlerPress = (btn: string) => {
     setBlockOrange(false)
@@ -46,6 +56,19 @@ export const Keyboard = ({ handlerNumber, handlerStatus }: KeyboardProps) => {
     setBlockGreen(true)
     setBlockNumbers(false)
     setNum([])
+  }
+
+  const greenVote = () => {
+    audioConfirm.current?.play()
+    handlerStatus('End')
+    setBlockOrange(true)
+    setBlockGreen(true)
+    setBlockNumbers(false)
+    setNum([])
+
+    setTimeout(() => {
+      handlerStatus('Begin')
+    }, 500)
   }
 
   useEffect(() => {
@@ -91,12 +114,14 @@ export const Keyboard = ({ handlerNumber, handlerStatus }: KeyboardProps) => {
           <ButtonWhite onClick={whiteVote}>
             <span>Branco</span>
           </ButtonWhite>
+
           <ButtonOrange disabled={blockOrange} onClick={orangeVote}>
             <span>Corrige</span>
           </ButtonOrange>
-          <ButtonGreen disabled={blockGreen}>
+
+          <ButtonGreen disabled={blockGreen} onClick={greenVote}>
             <span>Confirma</span>
-            {/*<audio ref={audioConfirm} src={songConfirm}></audio>*/}
+            <audio ref={audioConfirm} src={songConfirm}></audio>
           </ButtonGreen>
         </S.Actions>
       </S.KeysContainer>
