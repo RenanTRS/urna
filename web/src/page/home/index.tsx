@@ -22,12 +22,7 @@ export const Home = () => {
 
   return (
     <S.MainStyled>
-      <View
-        number={number}
-        status={status}
-        handlerStatus={handlerStatus}
-        candidate={candidate!}
-      />
+      <View number={number} status={status} candidate={candidate!} />
       <Keyboard handlerNumber={handlerNumber} handlerStatus={handlerStatus} />
     </S.MainStyled>
   )

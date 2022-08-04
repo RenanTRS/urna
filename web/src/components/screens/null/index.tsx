@@ -1,14 +1,14 @@
 import { Header } from 'components/header'
 import { Numbers } from 'components/numbers'
 import * as S from './Null'
-export const Null = () => {
-  const number = '16'
+
+interface NullProps {
+  number: string
+}
+
+export const Null = ({ number }: NullProps) => {
   return (
     <S.Null>
-      {/* <header>
-        <p>Seu voto para</p>
-        <h1>Presidente</h1>
-      </header> */}
       <Header />
 
       <ul>
