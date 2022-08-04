@@ -17,7 +17,7 @@ export const Valid = ({ candidate }: ValidProps) => {
     <S.Valid>
       <Header />
 
-      <img src={candidate.avatar} alt="Candidato" />
+      <img src={candidate.avatar} alt={`Candidato ${candidate.name}`} />
 
       <S.Info>
         <ul>
