@@ -74,9 +74,20 @@ describe('Keyboard component', () => {
 
         const btnActions = screen.getAllByTestId('btn-action')
 
-        fireEvent.click(btnActions[0])
+        fireEvent.click(btnActions[0]) //White button
 
         expect(handlerStatusSpy).toHaveBeenCalled()
+      })
+
+      it('should be able activate orange and green buttons', () => {
+        render(<MockKeyboard />)
+
+        const btnActions = screen.getAllByTestId('btn-action')
+
+        fireEvent.click(btnActions[0]) //White button
+
+        expect(btnActions[1]).not.toBeDisabled()
+        expect(btnActions[1]).not.toBeDisabled()
       })
 
       it('should be able activate orange button and call a function', () => {
@@ -91,7 +102,7 @@ describe('Keyboard component', () => {
 
         expect(btnActions[1]).not.toBeDisabled()
 
-        fireEvent.click(btnActions[1])
+        fireEvent.click(btnActions[1]) //Orange button
         expect(handlerStatusSpy).toHaveBeenCalled()
       })
 
@@ -109,7 +120,7 @@ describe('Keyboard component', () => {
         fireEvent.click(btnNumbers[7])
         expect(btnActions[2]).not.toBeDisabled()
 
-        fireEvent.click(btnActions[2])
+        fireEvent.click(btnActions[2]) //Green button
         expect(handlerStatusSpy).toHaveBeenCalled()
       })
     })
