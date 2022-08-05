@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 import { Keyboard } from '.'
 
+//Mocks
 const handlerNumberSpy = jest.fn()
 const handlerStatusSpy = jest.fn()
 const mockAudio = jest.fn()
@@ -16,6 +17,7 @@ const MockKeyboard = () => {
 
 window.HTMLMediaElement.prototype.play = () => mockAudio() //Avoid audio error
 
+//Tests
 describe('Keyboard component', () => {
   it('should be able to render a tag', () => {
     render(<MockKeyboard />)
@@ -86,7 +88,6 @@ describe('Keyboard component', () => {
 
         fireEvent.click(btnActions[0]) //White button
 
-        expect(btnActions[1]).not.toBeDisabled()
         expect(btnActions[1]).not.toBeDisabled()
       })
 
