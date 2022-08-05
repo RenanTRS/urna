@@ -23,51 +23,6 @@ export const Valid = styled.div`
     justify-content: initial;
   }
 
-  /* header {
-    max-width: 70%;
-
-    @media (max-width: 1200px) {
-      height: clamp(0rem, 9vh, 25rem);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    @media (max-width: 1200px) and (orientation: landscape) {
-      height: clamp(0rem, 16vh, 25rem);
-      max-width: 60%;
-
-      justify-content: initial;
-      flex: 1;
-    }
-
-    p {
-      text-transform: uppercase;
-      font-size: 3.3rem;
-
-      @media (max-width: 1200px) {
-        text-align: center;
-        font-size: clamp(1.8rem, 4vw, 3.3rem);
-      }
-      @media (max-width: 1200px) and (orientation: landscape) {
-        text-align: initial;
-      }
-    }
-    strong {
-      text-align: center;
-      font-size: 3.4rem;
-
-      margin: 1rem 0;
-
-      @media (max-width: 1200px) {
-        margin: 0;
-        font-size: clamp(3.4rem, 6vw, 6rem);
-      }
-      @media (max-width: 1200px) and (orientation: landscape) {
-        flex: 1;
-      }
-    }
-  } */
-
   img {
     width: 21.8rem;
     height: 27.2rem;
@@ -171,12 +126,3 @@ export const Info = styled.div`
     }
   }
 `
-
-/* export const Number = styled.span`
-  border: 2px solid black;
-
-  padding: 0.5rem 1rem;
-  &:not(:last-child) {
-    margin-right: 1rem;
-  }
-` */
