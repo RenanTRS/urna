@@ -32,6 +32,7 @@ export const Keyboard = ({ handlerNumber, handlerStatus }: KeyboardProps) => {
 
   const btnNum = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'] //wrapper
   const audioConfirm = useRef<HTMLAudioElement>(null) //audio
+  const playSong = () => audioConfirm.current?.play()
 
   const handlerPress = (btn: string) => {
     setBlockOrange(false)
@@ -59,7 +60,7 @@ export const Keyboard = ({ handlerNumber, handlerStatus }: KeyboardProps) => {
   }
 
   const greenVote = () => {
-    audioConfirm.current?.play()
+    playSong()
     handlerStatus('End')
     setBlockOrange(true)
     setBlockGreen(true)
@@ -103,6 +104,7 @@ export const Keyboard = ({ handlerNumber, handlerStatus }: KeyboardProps) => {
                 key={btn}
                 onClick={() => handlerPress(btn)}
                 disabled={blockNumbers}
+                data-testid="btn-number"
               >
                 <span>{btn}</span>
               </ButtonNumber>
@@ -111,15 +113,23 @@ export const Keyboard = ({ handlerNumber, handlerStatus }: KeyboardProps) => {
         </S.Numbers>
 
         <S.Actions>
-          <ButtonWhite onClick={whiteVote}>
+          <ButtonWhite onClick={whiteVote} data-testid="btn-action">
             <span>Branco</span>
           </ButtonWhite>
 
-          <ButtonOrange disabled={blockOrange} onClick={orangeVote}>
+          <ButtonOrange
+            disabled={blockOrange}
+            onClick={orangeVote}
+            data-testid="btn-action"
+          >
             <span>Corrige</span>
           </ButtonOrange>
 
-          <ButtonGreen disabled={blockGreen} onClick={greenVote}>
+          <ButtonGreen
+            disabled={blockGreen}
+            onClick={greenVote}
+            data-testid="btn-action"
+          >
             <span>Confirma</span>
             <audio ref={audioConfirm} src={songConfirm}></audio>
           </ButtonGreen>
