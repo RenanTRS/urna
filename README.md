@@ -2,7 +2,7 @@
     <img src="./design/logoProject.svg" alt="Logo" />
 </div>
 
-<p align="center">⚠️ under development!</p>
+<br>
 
 <p align="center">
   <img src="https://img.shields.io/github/license/renantrs/urna?style=for-the-badge" alt="GitHub License" />
